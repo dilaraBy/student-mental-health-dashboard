@@ -2,6 +2,35 @@
 import pandas as pd
 from services import data_processing as dp
 
+def test_load_data_file_not_found():
+    """Test that load_data raises FileNotFoundError for missing file."""
+    try:
+        dp.load_data("/nonexistent/path/file.csv")
+        assert False, "Should have raised FileNotFoundError"
+    except FileNotFoundError as e:
+        assert "not found" in str(e)
+
+
+def test_load_data_valid_csv(tmp_path):
+    """Test loading a valid CSV file."""
+    # Create a temporary CSV file
+    test_file = tmp_path / "test_data.csv"
+    test_df = pd.DataFrame({
+        "Name": ["Alice", "Bob"],
+        "Age": [25, 30],
+        "Timestamp": ["2023-01-01 10:00", "2023-01-02 11:00"]
+    })
+    test_df.to_csv(test_file, index=False)
+
+    # Load the file
+    loaded_df = dp.load_data(str(test_file))
+
+    # Verify data
+    assert len(loaded_df) == 2
+    assert list(loaded_df.columns) == ["Name", "Age", "Timestamp"]
+    assert loaded_df["Name"].tolist() == ["Alice", "Bob"]
+    assert loaded_df["Age"].tolist() == [25, 30]
+
 def test_convert_timestamps_valid_and_invalid():
     df = pd.DataFrame({"Timestamp": ["2023-01-01 10:00", "not a date"]})
     converted = dp.convert_timestamps(df)
@@ -51,31 +80,3 @@ def test_fill_missing_values_and_drop_depression():
     assert cleaned["Do you have Depression?"].tolist() == ["Yes", "No"]
 
 
-def test_load_data_file_not_found():
-    """Test that load_data raises FileNotFoundError for missing file."""
-    try:
-        dp.load_data("/nonexistent/path/file.csv")
-        assert False, "Should have raised FileNotFoundError"
-    except FileNotFoundError as e:
-        assert "not found" in str(e)
-
-
-def test_load_data_valid_csv(tmp_path):
-    """Test loading a valid CSV file."""
-    # Create a temporary CSV file
-    test_file = tmp_path / "test_data.csv"
-    test_df = pd.DataFrame({
-        "Name": ["Alice", "Bob"],
-        "Age": [25, 30],
-        "Timestamp": ["2023-01-01 10:00", "2023-01-02 11:00"]
-    })
-    test_df.to_csv(test_file, index=False)
-
-    # Load the file
-    loaded_df = dp.load_data(str(test_file))
-
-    # Verify data
-    assert len(loaded_df) == 2
-    assert list(loaded_df.columns) == ["Name", "Age", "Timestamp"]
-    assert loaded_df["Name"].tolist() == ["Alice", "Bob"]
-    assert loaded_df["Age"].tolist() == [25, 30]

@@ -1,0 +1,142 @@
+2025-12-06 14:15:26 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:15:26 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:23:42 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:23:42 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:23:42 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:23:42 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:23:42 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:23:42 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:23:42 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:30:55 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:30:55 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:30:55 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:30:55 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:30:55 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:30:55 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:30:55 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:30:55 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:30:55 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-0\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:30:55 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:40:34 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:40:34 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:40:34 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:40:34 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:40:34 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:40:34 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:40:34 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:40:34 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:40:34 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-1\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:40:34 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:40:48 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:40:48 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:40:48 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:40:48 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:40:48 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:40:48 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:40:48 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:40:48 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:40:48 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-2\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:40:48 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:41:03 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:41:03 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:41:03 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:41:03 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:41:03 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:41:03 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:41:03 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:41:03 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:41:03 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-3\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:41:03 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 14:41:58 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 14:41:58 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 14:41:58 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 14:41:58 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:41:58 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:41:58 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:41:58 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:41:58 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:41:58 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:41:58 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:41:58 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:41:58 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:41:58 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-4\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:41:58 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 14:42:42 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 14:42:42 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 14:42:42 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 14:42:42 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:42:42 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:42:42 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:42:42 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:42:42 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:42:42 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:42:42 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:42:42 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:42:42 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:42:42 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-5\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:42:42 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 14:43:00 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 14:43:00 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 14:43:00 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 14:43:00 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 14:43:00 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 14:43:00 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 14:43:00 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:43:00 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 14:43:00 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 14:43:00 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 14:43:00 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 14:43:00 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 14:43:00 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 14:43:00 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 14:43:00 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 14:43:00 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-6\test_load_data_valid_csv0\test_data.csv
+2025-12-06 14:43:00 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
