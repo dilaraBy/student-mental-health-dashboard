@@ -46,17 +46,47 @@ def load_data(filepath: str = None) -> pd.DataFrame:
 
 
 def convert_timestamps(df: pd.DataFrame, column: str = "Timestamp") -> pd.DataFrame:
-	"""Convert the specified timestamp column to datetime, coercing errors to NaT.
+	"""Convert the specified timestamp column to datetime, handling European date format.
+	
+	Expected format in raw data: 'dd.mm.yyyy hh:mm' (e.g., '8.05.2023 22:26')
+	Output format: datetime64[ns]
 
 	Returns a new DataFrame with the converted column.
 	"""
 	logger.debug(f"Converting column '{column}' to datetime.")
 	out = df.copy()
-	out[column] = pd.to_datetime(out[column], errors="coerce")
-	nat_count = out[column].isna().sum()
-	if nat_count > 0:
-		logger.warning(f"Converted {nat_count} invalid timestamp(s) to NaT.")
-	logger.info(f"Successfully converted '{column}' to datetime.")
+	
+	# Try to parse European date format first (dd.mm.yyyy hh:mm)
+	try:
+		out[column] = pd.to_datetime(out[column], format='%d.%m.%Y %H:%M', errors='coerce')
+		nat_count_european = out[column].isna().sum()
+		
+		# If still have many NaT values, try other common formats
+		if nat_count_european > 0:
+			# For rows that failed European format, try standard ISO/American formats
+			mask_na = out[column].isna()
+			if mask_na.any():
+				logger.debug(f"Trying alternative formats for {mask_na.sum()} timestamps")
+				# Try standard pandas parsing as fallback
+				out.loc[mask_na, column] = pd.to_datetime(df.loc[mask_na, column], errors='coerce')
+		
+		final_nat_count = out[column].isna().sum()
+		
+		if final_nat_count > 0:
+			logger.warning(f"Converted {final_nat_count} invalid timestamp(s) to NaT.")
+		
+		successful_count = len(out) - final_nat_count
+		logger.info(f"Successfully converted {successful_count} timestamps to datetime (European format: dd.mm.yyyy hh:mm).")
+		
+	except Exception as e:
+		logger.warning(f"European format parsing failed: {e}. Falling back to standard parsing.")
+		# Fallback to standard pandas parsing
+		out[column] = pd.to_datetime(out[column], errors="coerce")
+		nat_count = out[column].isna().sum()
+		if nat_count > 0:
+			logger.warning(f"Converted {nat_count} invalid timestamp(s) to NaT.")
+		logger.info(f"Successfully converted '{column}' to datetime using standard parsing.")
+	
 	return out
 
 
@@ -137,10 +167,16 @@ def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
         if dropped > 0:
             logger.info(f"Dropped {dropped} rows with missing {depression_col} value.")
 
-    # 2. Fill missing values for all other columns
+    # 2. Fill missing values for non-numeric columns only
+    # Numeric columns (age, year, month) should keep NaN values
+    numeric_cols = {'age', 'year', 'month'}
+    
     for col in out.columns:
         if depression_col and col == depression_col:
             continue  # already handled
+        if col in numeric_cols:
+            continue  # skip numeric columns, they'll be handled separately
+        
         missing_before = out[col].isna().sum()
         if missing_before > 0:
             out[col] = out[col].fillna("Unknown")
@@ -164,6 +200,42 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 		logger.info(f"Removed {removed} duplicate row(s).")
 	else:
 		logger.debug("No duplicates found.")
+	
+	return out
+
+
+def convert_numeric_columns(df: pd.DataFrame) -> pd.DataFrame:
+	"""Convert appropriate columns to numeric types.
+	
+	Converts age, year, and month columns to numeric, keeping NaN for missing values.
+	Leaves other columns as strings/objects.
+	"""
+	out = df.copy()
+	
+	# Define columns that should be numeric
+	numeric_columns = {
+		'age': 'float64',      # Age can be decimal
+		'year': 'Int64',       # Year as integer (nullable)  
+		'month': 'Int64',      # Month as integer (nullable)
+	}
+	
+	for col, target_dtype in numeric_columns.items():
+		if col in out.columns:
+			# Replace "Unknown" with NaN first for numeric conversion
+			if out[col].dtype == 'object':
+				out[col] = out[col].replace('Unknown', pd.NA)
+				
+			# Convert to numeric, coercing errors to NaN
+			try:
+				if target_dtype == 'float64':
+					out[col] = pd.to_numeric(out[col], errors='coerce')
+				elif target_dtype == 'Int64':
+					# Use nullable integer type
+					out[col] = pd.to_numeric(out[col], errors='coerce').astype('Int64')
+				
+				logger.debug(f"Converted {col} to {target_dtype}")
+			except Exception as e:
+				logger.warning(f"Failed to convert {col} to numeric: {e}")
 	
 	return out
 
@@ -263,6 +335,13 @@ def clean_data(filepath: str = None) -> pd.DataFrame:
 		df = fill_missing_values(df)
 	except Exception as e:
 		logger.warning(f"Filling missing values failed: {e}; continuing")
+	
+	# Step 8: Convert numeric columns to proper types
+	try:
+		df = convert_numeric_columns(df)
+		logger.debug(f"Step 8: Converted numeric columns to proper types")
+	except Exception as e:
+		logger.warning(f"Numeric conversion failed: {e}; continuing")
 	
 	logger.info(f"Data cleaning complete. Final shape: {df.shape}")
 	return df
