@@ -140,3 +140,879 @@
 2025-12-06 14:43:00 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
 2025-12-06 14:43:00 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-6\test_load_data_valid_csv0\test_data.csv
 2025-12-06 14:43:00 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 16:10:49 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 16:10:49 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 16:10:49 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 16:10:49 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 16:10:49 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:10:49 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:10:49 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 16:10:49 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 16:10:49 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-7\test_load_data_valid_csv0\test_data.csv
+2025-12-06 16:10:49 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:10:49 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 16:10:49 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 16:10:49 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:10:49 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 16:10:49 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 16:10:49 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 16:10:49 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 16:10:49 - db.repository - INFO - Initialized survey_responses table (if not existing).
+2025-12-06 16:10:49 - db.repository - INFO - Initialized survey_responses table (if not existing).
+2025-12-06 16:10:49 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 16:15:40 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 16:15:40 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 16:15:40 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 16:15:40 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 16:15:40 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:15:40 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:15:40 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 16:15:40 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 16:15:40 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-8\test_load_data_valid_csv0\test_data.csv
+2025-12-06 16:15:40 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:15:40 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 16:15:40 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 16:15:40 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:15:40 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 16:15:40 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 16:15:40 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 16:15:40 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 16:15:40 - db.repository - INFO - Initialized survey_responses table (if not existing).
+2025-12-06 16:15:40 - db.repository - INFO - Initialized survey_responses table (if not existing).
+2025-12-06 16:15:40 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 16:18:13 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 16:18:13 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 16:18:13 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 16:18:13 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 16:18:13 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:18:13 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:18:13 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 16:18:13 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 16:18:13 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-9\test_load_data_valid_csv0\test_data.csv
+2025-12-06 16:18:13 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:18:13 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 16:18:13 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 16:18:13 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:18:13 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 16:18:13 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 16:18:13 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 16:18:13 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 16:18:13 - db.repository - INFO - Initialized survey_responses table (if not existing).
+2025-12-06 16:18:13 - db.repository - INFO - Initialized survey_responses table (if not existing).
+2025-12-06 16:18:13 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 16:25:08 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 16:25:08 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 16:25:08 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 16:25:08 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 16:25:08 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:25:08 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:25:08 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 16:25:08 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 16:25:08 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-10\test_load_data_valid_csv0\test_data.csv
+2025-12-06 16:25:08 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:25:08 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 16:25:08 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 16:25:08 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:25:08 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 16:25:08 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 16:25:08 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 16:25:08 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 16:37:57 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 16:37:57 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 16:37:57 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 16:37:57 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 16:37:57 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:37:57 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 16:37:57 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 16:37:57 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 16:37:57 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-11\test_load_data_valid_csv0\test_data.csv
+2025-12-06 16:37:57 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:37:57 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 16:37:57 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 16:37:57 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 16:37:57 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 16:37:57 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 16:37:57 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 16:37:57 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 16:37:57 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 16:37:57 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 16:37:57 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 20:16:58 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 20:16:58 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 20:16:58 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 20:16:58 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 20:16:58 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 20:16:58 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 20:16:58 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 20:16:58 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 20:16:58 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-12\test_load_data_valid_csv0\test_data.csv
+2025-12-06 20:16:58 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 20:16:58 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 20:16:58 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 20:16:58 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 20:16:58 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 20:16:58 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 20:16:58 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 20:16:58 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 20:16:58 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:16:58 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:16:59 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 20:16:59 - db.repository - INFO - Retrieved 2 rows from survey_responses.
+2025-12-06 20:44:27 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:44:27 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:44:27 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 20:44:27 - db.repository - INFO - Retrieved 2 rows from survey_responses.
+2025-12-06 20:46:00 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:46:00 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-06 20:46:00 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 20:46:00 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-06 20:46:00 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-06 20:46:00 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 20:46:00 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 20:46:00 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-06 20:46:00 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-06 20:46:34 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:46:34 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-06 20:46:34 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 20:46:34 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-06 20:46:34 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-06 20:46:34 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 20:46:34 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 20:46:34 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-06 20:46:34 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-06 20:46:34 - db.repository - DEBUG - Converting object column with pandas.Timestamp to strings: Timestamp
+2025-12-06 20:46:34 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-06 20:46:34 - app.dashboard - INFO - Loaded 570 cleaned rows into DB from Streamlit.
+2025-12-06 20:46:43 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-06 20:46:43 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-06 20:46:43 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-06 20:46:43 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-06 20:46:43 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 20:46:43 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-06 20:46:43 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-06 20:46:43 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-06 20:46:43 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-14\test_load_data_valid_csv0\test_data.csv
+2025-12-06 20:46:43 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 20:46:43 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-06 20:46:43 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 20:46:43 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 20:46:43 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 20:46:43 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 20:46:43 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-06 20:46:43 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-06 20:46:43 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:46:43 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 20:46:43 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-06 20:46:43 - db.repository - INFO - Retrieved 2 rows from survey_responses.
+2025-12-06 21:03:54 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-06 21:03:54 - services.analysis - DEBUG - Prevalence for Do you have Depression?: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-06 21:05:13 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-06 21:05:13 - services.analysis - DEBUG - Prevalence for Do you have Depression?: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-06 21:05:17 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 21:05:17 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-06 21:05:17 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 21:05:17 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-06 21:05:17 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-06 21:05:17 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 21:05:17 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 21:05:17 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-06 21:05:17 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-06 21:05:17 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-06 21:05:24 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-06 21:05:27 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 21:05:27 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-06 21:05:27 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 21:05:27 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-06 21:05:27 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-06 21:05:27 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 21:05:27 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 21:05:27 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-06 21:05:27 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-06 21:05:27 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-06 21:05:38 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-06 21:27:35 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-06 21:27:41 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-06 21:27:41 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-06 21:27:41 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-06 21:27:41 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-06 21:27:41 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-06 21:27:41 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-06 21:27:41 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-06 21:27:41 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-06 21:27:41 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-06 21:27:41 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-07 01:47:30 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-07 12:54:27 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-07 12:54:50 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 12:54:50 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 12:54:50 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 12:54:50 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 12:54:50 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:54:50 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 12:54:50 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 12:54:50 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 12:54:50 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 12:54:50 - __main__ - ERROR - Error in Streamlit load button: Error binding parameter 1: type 'Timestamp' is not supported
+2025-12-07 12:54:50 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-07 12:54:59 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 12:54:59 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 12:54:59 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 12:54:59 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 12:54:59 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:54:59 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 12:54:59 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 12:54:59 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 12:54:59 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 12:54:59 - __main__ - ERROR - Error in Streamlit load button: Error binding parameter 1: type 'Timestamp' is not supported
+2025-12-07 12:54:59 - db.repository - INFO - Retrieved 0 rows from survey_responses.
+2025-12-07 12:55:36 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 12:55:36 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 12:55:36 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 12:55:36 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:55:36 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 12:55:36 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 12:55:36 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 12:55:36 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 12:55:36 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 12:55:36 - db.repository - DEBUG - Converting Timestamp column 'Timestamp' to ISO string
+2025-12-07 12:55:36 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-07 12:55:36 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 12:55:57 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 12:55:57 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 12:55:57 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 12:55:57 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:55:57 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 12:55:57 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 12:55:57 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 12:55:57 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 12:55:57 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 12:55:57 - db.repository - DEBUG - Converting Timestamp column 'Timestamp' to ISO string
+2025-12-07 12:55:58 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-07 12:55:58 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 12:56:02 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 12:56:02 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 12:56:02 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 12:56:02 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 12:56:02 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Auto-detected object columns: ['Choose your gender', 'Division', 'University', 'Living Situation', 'What is your course?', 'Your current year of Study', 'What is your CGPA?', 'Financial Stress Level', 'Marital status', 'Do you have Depression?', 'Do you have Anxiety?', 'Do you have Panic attack?', 'Family History of Mental Illness', 'Did you seek any specialist for a treatment?']
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Choose your gender
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Division
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: University
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Living Situation
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your course?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Your current year of Study
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: What is your CGPA?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Financial Stress Level
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Marital status
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Panic attack?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Family History of Mental Illness
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Normalized yes/no values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:56:02 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 12:56:02 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 12:56:02 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 340 missing values in column: Timestamp
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 27 missing values in column: Choose your gender
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 28 missing values in column: Age
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 30 missing values in column: Division
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 28 missing values in column: University
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 29 missing values in column: Living Situation
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 28 missing values in column: What is your course?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 30 missing values in column: Your current year of Study
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 29 missing values in column: What is your CGPA?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 29 missing values in column: Financial Stress Level
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 28 missing values in column: Marital status
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 27 missing values in column: Do you have Anxiety?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 30 missing values in column: Do you have Panic attack?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 29 missing values in column: Family History of Mental Illness
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 29 missing values in column: Did you seek any specialist for a treatment?
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 12:56:02 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 12:56:02 - db.repository - DEBUG - Converting Timestamp column 'Timestamp' to ISO string
+2025-12-07 12:56:02 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-07 12:56:02 - app.dashboard - INFO - Loaded 570 cleaned rows into DB from Streamlit.
+2025-12-07 12:56:09 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 12:56:09 - services.analysis - DEBUG - Prevalence for Do you have Depression?: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-07 13:12:25 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-07 13:12:25 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 13:12:26 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Step 1: Loaded 600 rows
+2025-12-07 13:12:26 - services.data_processing - DEBUG - No duplicates found.
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-07 13:12:26 - services.data_processing - INFO - Standardized 16 column name(s).
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-07 13:12:26 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 13:12:26 - services.data_processing - INFO - Successfully converted 'timestamp' to datetime.
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: university
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: course
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-07 13:12:26 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-07 13:12:26 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 13:12:26 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 340 missing values in column: timestamp
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 27 missing values in column: gender
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 28 missing values in column: age
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 30 missing values in column: division
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 28 missing values in column: university
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 28 missing values in column: course
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 13:12:26 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 13:12:26 - services.data_processing - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-07 13:12:46 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-07 13:12:46 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-07 13:12:46 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-07 13:12:46 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-07 13:12:46 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 13:12:46 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 13:12:46 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-07 13:12:46 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-07 13:12:46 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-15\test_load_data_valid_csv0\test_data.csv
+2025-12-07 13:12:46 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-07 13:12:46 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 13:12:46 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-07 13:12:46 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 13:12:46 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-07 13:12:46 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 13:12:46 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 13:12:46 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 13:12:47 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 13:12:47 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 13:12:47 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 13:12:47 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 13:12:47 - services.data_processing - INFO - Dropped 1 rows with missing Do you have Depression? value.
+2025-12-07 13:12:47 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-07 13:12:47 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 13:12:47 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 13:12:47 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-07 13:12:47 - db.repository - INFO - Retrieved 2 rows from survey_responses.
+2025-12-07 13:12:58 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 13:12:58 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-07 13:12:58 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-07 13:12:58 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Step 1: Loaded 600 rows
+2025-12-07 13:12:58 - services.data_processing - DEBUG - No duplicates found.
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-07 13:12:58 - services.data_processing - INFO - Standardized 16 column name(s).
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-07 13:12:58 - services.data_processing - WARNING - Converted 362 invalid timestamp(s) to NaT.
+2025-12-07 13:12:58 - services.data_processing - INFO - Successfully converted 'timestamp' to datetime.
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-07 13:12:58 - services.data_processing - DEBUG - Normalized yes/no values in column: university
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: course
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-07 13:12:59 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-07 13:12:59 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 13:12:59 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 340 missing values in column: timestamp
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 27 missing values in column: gender
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 28 missing values in column: age
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 30 missing values in column: division
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 28 missing values in column: university
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 28 missing values in column: course
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 340 missing values in column: year
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 340 missing values in column: month
+2025-12-07 13:12:59 - services.data_processing - DEBUG - Filled 340 missing values in column: day_of_week
+2025-12-07 13:12:59 - services.data_processing - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-07 13:12:59 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-07 13:12:59 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-07 13:12:59 - app.dashboard - INFO - Loaded 570 cleaned rows into DB from Streamlit.
+2025-12-07 14:12:56 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-07 14:12:56 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-07 14:12:56 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-07 14:12:56 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-07 14:12:56 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 14:12:56 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 14:12:56 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-07 14:12:56 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-07 14:12:56 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-16\test_load_data_valid_csv0\test_data.csv
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 14:12:56 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 14:12:56 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 14:12:56 - services.data_processing - INFO - Dropped 1 rows with missing Do you have Depression? value.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-07 14:12:56 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-07 14:12:56 - services.data_processing - INFO - Standardized 2 column name(s).
+2025-12-07 14:12:56 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-07 14:12:56 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-16\test_clean_data_pipeline_end_t0\raw.csv
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully loaded 3 rows and 4 columns.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Step 1: Loaded 3 rows
+2025-12-07 14:12:56 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Step 2: After removing duplicates: 2 rows
+2025-12-07 14:12:56 - services.data_processing - INFO - Standardized 4 column name(s).
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully converted 'timestamp' to datetime.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Auto-detected object columns: ['depression', 'gender', 'division']
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-07 14:12:56 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-07 14:12:56 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 14:12:56 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-07 14:12:56 - services.data_processing - DEBUG - Filled 1 missing values in column: division
+2025-12-07 14:12:56 - services.data_processing - INFO - Data cleaning complete. Final shape: (1, 7)
+2025-12-07 14:12:56 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 14:12:56 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 14:12:56 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-07 14:12:56 - db.repository - INFO - Retrieved 2 rows from survey_responses.
+2025-12-07 14:14:22 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(2), 'total': 5, 'yes_percentage': np.float64(60.0), 'no_percentage': np.float64(40.0)}
+2025-12-07 14:14:22 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(2), 'no_count': np.int64(1), 'total': 3, 'yes_percentage': np.float64(66.67), 'no_percentage': np.float64(33.33)}
+2025-12-07 14:14:22 - services.analysis - DEBUG - Prevalence for anxiety: {'yes_count': np.int64(1), 'no_count': np.int64(2), 'total': 3, 'yes_percentage': np.float64(33.33), 'no_percentage': np.float64(66.67)}
+2025-12-07 14:14:22 - services.analysis - INFO - Computed prevalence for columns: ['depression', 'anxiety']
+2025-12-07 14:14:22 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 14:14:22 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(1), 'no_count': np.int64(1), 'total': 2, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 14:14:22 - services.analysis - INFO - Computed group comparison for depression by Gender
+2025-12-07 14:14:22 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-07 14:14:23 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-17\test_load_data_valid_csv0\test_data.csv
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 14:14:23 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully converted 'Timestamp' to datetime.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-07 14:14:23 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 14:14:23 - services.data_processing - INFO - Dropped 1 rows with missing Do you have Depression? value.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-07 14:14:23 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-07 14:14:23 - services.data_processing - INFO - Standardized 2 column name(s).
+2025-12-07 14:14:23 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-07 14:14:23 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-17\test_clean_data_pipeline_end_t0\raw.csv
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully loaded 3 rows and 4 columns.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Step 1: Loaded 3 rows
+2025-12-07 14:14:23 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Step 2: After removing duplicates: 2 rows
+2025-12-07 14:14:23 - services.data_processing - INFO - Standardized 4 column name(s).
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully converted 'timestamp' to datetime.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Auto-detected object columns: ['depression', 'gender', 'division']
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-07 14:14:23 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-07 14:14:23 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-07 14:14:23 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-07 14:14:23 - services.data_processing - DEBUG - Filled 1 missing values in column: division
+2025-12-07 14:14:23 - services.data_processing - INFO - Data cleaning complete. Final shape: (1, 7)
+2025-12-07 14:14:23 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 14:14:23 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-07 14:14:23 - db.repository - INFO - Inserted data into survey_responses; total rows = 2
+2025-12-07 14:14:23 - db.repository - INFO - Retrieved 2 rows from survey_responses.

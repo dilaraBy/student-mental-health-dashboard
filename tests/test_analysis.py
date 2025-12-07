@@ -1,4 +1,8 @@
 # Tests for analysis module
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import pandas as pd
 from services import analysis as an
 

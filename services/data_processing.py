@@ -1,8 +1,15 @@
+import sys
+from pathlib import Path
+
+project_root = Path(__file__).parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 from typing import Iterable
 import pandas as pd
-from pathlib import Path
 from utils.logger import get_logger
 from utils.config import RAW_DATA_PATH
+
 
 logger = get_logger(__name__)
 
@@ -110,22 +117,29 @@ def add_temporal_columns(df: pd.DataFrame, column: str = "Timestamp") -> pd.Data
 
 def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """
-    - Drop rows where 'Do you have Depression?' is missing
+    - Drop rows where 'depression' (or 'Do you have Depression?') is missing
     - For all other columns, fill missing values with 'Unknown'
     """
     out = df.copy()
 
+    # Handle both original and standardized column names
+    depression_col = None
+    if "depression" in out.columns:
+        depression_col = "depression"
+    elif "Do you have Depression?" in out.columns:
+        depression_col = "Do you have Depression?"
+    
     # 1. Drop rows where depression is missing
-    if "Do you have Depression?" in out.columns:
+    if depression_col:
         before = len(out)
-        out = out.dropna(subset=["Do you have Depression?"])
+        out = out.dropna(subset=[depression_col])
         dropped = before - len(out)
         if dropped > 0:
-            logger.info(f"Dropped {dropped} rows with missing depression value.")
+            logger.info(f"Dropped {dropped} rows with missing {depression_col} value.")
 
     # 2. Fill missing values for all other columns
     for col in out.columns:
-        if col == "Do you have Depression?":
+        if depression_col and col == depression_col:
             continue  # already handled
         missing_before = out[col].isna().sum()
         if missing_before > 0:
@@ -133,3 +147,122 @@ def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
             logger.debug(f"Filled {missing_before} missing values in column: {col}")
 
     return out
+
+
+def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
+	"""Remove duplicate rows from the DataFrame.
+	
+	Returns a new DataFrame with duplicates removed, keeping first occurrence.
+	"""
+	out = df.copy()
+	before = len(out)
+	out = out.drop_duplicates(keep='first')
+	after = len(out)
+	removed = before - after
+	
+	if removed > 0:
+		logger.info(f"Removed {removed} duplicate row(s).")
+	else:
+		logger.debug("No duplicates found.")
+	
+	return out
+
+
+def standardize_column_names(df: pd.DataFrame) -> pd.DataFrame:
+	"""Simplify column names by removing special characters and using lowercase.
+	
+	Examples:
+		- 'Do you have Depression?' -> 'depression'
+		- 'Choose your gender' -> 'gender'
+		- 'Your current year of Study' -> 'year_of_study'
+	"""
+	out = df.copy()
+	
+	# Mapping of original column names to simplified names
+	column_mapping = {
+		"Do you have Depression?": "depression",
+		"Do you have Anxiety?": "anxiety",
+		"Do you have Panic attack?": "panic_attack",
+		"Family History of Mental Illness": "family_history_mental_illness",
+		"Did you seek any specialist for a treatment?": "sought_specialist_treatment",
+		"Choose your gender": "gender",
+		"Your current year of Study": "year_of_study",
+		"What is your course?": "course",
+		"What is your CGPA?": "cgpa",
+		"Marital status": "marital_status",
+		"Living Situation": "living_situation",
+		"University": "university",
+		"Financial Stress Level": "financial_stress_level",
+		"Age": "age",
+		"Division": "division",
+		"Timestamp": "timestamp",
+	}
+	
+	# Rename columns that exist in both mapping and dataframe
+	rename_dict = {old: new for old, new in column_mapping.items() if old in out.columns}
+	
+	if rename_dict:
+		out = out.rename(columns=rename_dict)
+		logger.info(f"Standardized {len(rename_dict)} column name(s).")
+	else:
+		logger.debug("No columns matched standardization mapping.")
+	
+	return out
+
+
+def clean_data(filepath: str = None) -> pd.DataFrame:
+	"""Main data cleaning pipeline.
+	
+	Orchestrates all data processing steps:
+	1. Load raw data
+	2. Remove duplicates
+	3. Standardize column names
+	4. Convert timestamps to datetime
+	5. Normalize yes/no columns
+	6. Add temporal columns
+	7. Fill missing values
+	
+	Args:
+		filepath: Path to CSV file. If None, uses RAW_DATA_PATH from config.
+	
+	Returns:
+		Cleaned DataFrame ready for analysis or storage.
+	"""
+	logger.info("Starting data cleaning pipeline...")
+	
+	# Step 1: Load
+	df = load_data(filepath)
+	logger.debug(f"Step 1: Loaded {len(df)} rows")
+	
+	# Step 2: Remove duplicates
+	df = remove_duplicates(df)
+	logger.debug(f"Step 2: After removing duplicates: {len(df)} rows")
+	
+	# Step 3: Standardize column names
+	df = standardize_column_names(df)
+	logger.debug(f"Step 3: Standardized column names")
+	
+	# Step 4: Convert timestamps (use 'timestamp' after standardization)
+	try:
+		df = convert_timestamps(df, column="timestamp")
+	except Exception as e:
+		logger.warning(f"Timestamp conversion failed: {e}; continuing with raw timestamps")
+	
+	# Step 5: Normalize yes/no columns
+	df = normalize_yes_no(df)
+	logger.debug(f"Step 5: Normalized yes/no columns")
+	
+	# Step 6: Add temporal columns
+	try:
+		df = add_temporal_columns(df, column="timestamp")
+	except Exception as e:
+		logger.warning(f"Adding temporal columns failed: {e}; continuing")
+	
+	# Step 7: Fill missing values (will now look for 'depression' column)
+	try:
+		df = fill_missing_values(df)
+	except Exception as e:
+		logger.warning(f"Filling missing values failed: {e}; continuing")
+	
+	logger.info(f"Data cleaning complete. Final shape: {df.shape}")
+	return df
