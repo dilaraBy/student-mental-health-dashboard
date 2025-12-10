@@ -165,3 +165,48 @@ def test_clean_data_pipeline_end_to_end(tmp_path):
         assert col in cleaned.columns
 
 
+def test_normalize_year_of_study():
+    """Test normalizing year of study values to consistent format."""
+    df = pd.DataFrame({
+        "year_of_study": [
+            "year 1",
+            "Year 1", 
+            "YEAR 2",
+            "year 3",
+            "Year 4",
+            "1st year",
+            "2nd year", 
+            "3rd year",
+            "4th year",
+            "first year",
+            "second year",
+            "third year",
+            "fourth year",
+            "1",
+            "2", 
+            "3",
+            "4",
+            "invalid",
+            None,
+            ""
+        ]
+    })
+    
+    result = dp.normalize_year_of_study(df)
+    
+    expected = [
+        "Year 1", "Year 1", "Year 2", "Year 3", "Year 4",  # Direct formats
+        "Year 1", "Year 2", "Year 3", "Year 4",           # Ordinal formats  
+        "Year 1", "Year 2", "Year 3", "Year 4",           # Written formats
+        "Year 1", "Year 2", "Year 3", "Year 4",           # Number formats
+        "Unknown", "Unknown", "Unknown"                    # Invalid/missing
+    ]
+    
+    assert result["year_of_study"].tolist() == expected
+    
+    # Test with missing column
+    df_no_col = pd.DataFrame({"other_col": [1, 2, 3]})
+    result_no_col = dp.normalize_year_of_study(df_no_col)
+    assert result_no_col.equals(df_no_col)  # Should return unchanged
+
+
