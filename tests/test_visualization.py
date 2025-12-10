@@ -11,14 +11,12 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 from services.visualization import (
-    plot_depression_prevalence,
-    plot_depression_by_gender,
-    plot_depression_by_division,
-    plot_depression_by_year_of_study,
+    plot_depression_prevalence, 
+    plot_depression_by_gender, 
+    plot_depression_by_division, 
+    plot_depression_by_year_of_study, 
     plot_monthly_depression_trend
 )
-
-
 class TestVisualizationFunctions:
     """Test class for all visualization functions."""
     
@@ -27,6 +25,10 @@ class TestVisualizationFunctions:
         """Create sample DataFrame with correct standardized column names."""
         data = {
             'depression': ['Yes', 'No', 'Yes', 'No', 'Yes', 'Yes', 'No', 'Yes'],
+            'anxiety': ['Yes', 'Yes', 'No', 'No', 'Yes', 'No', 'Yes', 'Yes'],
+            'panic_attack': ['No', 'No', 'Yes', 'No', 'Yes', 'No', 'No', 'Yes'],
+            'sought_treatment': ['Yes', 'No', 'Yes', 'No', 'No', 'Yes', 'No', 'Yes'],
+            'financial_stress_level': [3, 1, 4, 2, 5, 3, 2, 4],
             'gender': ['Male', 'Female', 'Male', 'Female', 'Male', 'Female', 'Male', 'Female'],
             'division': ['Dhaka', 'Chittagong', 'Dhaka', 'Sylhet', 'Chittagong', 'Dhaka', 'Sylhet', 'Dhaka'],
             'year_of_study': [1, 2, 3, 4, 1, 2, 3, 4],
@@ -46,7 +48,10 @@ class TestVisualizationFunctions:
     @pytest.fixture
     def empty_data(self):
         """Create empty DataFrame with correct column structure."""
-        return pd.DataFrame(columns=['depression', 'gender', 'division', 'year_of_study', 'timestamp'])
+        return pd.DataFrame(columns=[
+            'depression', 'anxiety', 'panic_attack', 'sought_treatment', 'financial_stress_level',
+            'gender', 'division', 'year_of_study', 'timestamp'
+        ])
     
     @pytest.fixture
     def missing_columns_data(self):
@@ -174,3 +179,5 @@ class TestVisualizationFunctions:
         plot_monthly_depression_trend(sample_data)
         assert sample_data.shape == original_shape
         assert sample_data.columns.tolist() == original_columns
+
+

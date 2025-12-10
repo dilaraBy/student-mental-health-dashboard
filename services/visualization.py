@@ -295,3 +295,6 @@ def plot_monthly_depression_trend(df: pd.DataFrame) -> matplotlib.figure.Figure:
     
     plt.tight_layout()
     return fig
+
+
+

@@ -39,10 +39,24 @@ class StudentMentalHealthRepository:
             cursor.execute(
                 """
                 CREATE TABLE IF NOT EXISTS survey_responses (
-                    Timestamp TEXT,
-                    Gender TEXT,
-                    Division TEXT,
-                    "Do you have Depression?" TEXT
+                    timestamp TEXT,
+                    gender TEXT,
+                    age REAL,
+                    division TEXT,
+                    university TEXT,
+                    living_situation TEXT,
+                    course TEXT,
+                    year_of_study TEXT,
+                    cgpa TEXT,
+                    financial_stress_level TEXT,
+                    marital_status TEXT,
+                    depression TEXT,
+                    anxiety TEXT,
+                    panic_attack TEXT,
+                    family_history_mental_illness TEXT,
+                    sought_specialist_treatment TEXT,
+                    year REAL,
+                    month REAL
                 );
                 """
             )
@@ -330,6 +344,163 @@ class StudentMentalHealthRepository:
             
         except Exception as e:
             logger.error(f"Error searching text in column '{column}': {e}")
+            return pd.DataFrame()
+        finally:
+            conn.close()
+
+    def create_record(self, record_data: dict) -> bool:
+        """
+        Create a new record in the survey_responses table.
+        
+        Args:
+            record_data: Dictionary with column names and values.
+            
+        Returns:
+            True if successful, False otherwise.
+        """
+        conn = self.get_connection()
+        try:
+            # Get table columns
+            cursor = conn.execute("PRAGMA table_info(survey_responses)")
+            columns = [row[1] for row in cursor.fetchall()]
+            
+            # Filter record_data to only include valid columns
+            valid_data = {k: v for k, v in record_data.items() if k in columns}
+            
+            if not valid_data:
+                logger.warning("No valid columns provided for record creation")
+                return False
+            
+            # Create INSERT query
+            placeholders = ', '.join(['?' for _ in valid_data])
+            column_names = ', '.join([f'[{col}]' for col in valid_data.keys()])
+            query = f"INSERT INTO survey_responses ({column_names}) VALUES ({placeholders})"
+            
+            cursor = conn.execute(query, list(valid_data.values()))
+            conn.commit()
+            
+            logger.info(f"Created new record with ID {cursor.lastrowid}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Error creating record: {e}")
+            return False
+        finally:
+            conn.close()
+
+    def update_record(self, rowid: int, record_data: dict) -> bool:
+        """
+        Update an existing record by rowid.
+        
+        Args:
+            rowid: The rowid of the record to update.
+            record_data: Dictionary with column names and new values.
+            
+        Returns:
+            True if successful, False otherwise.
+        """
+        conn = self.get_connection()
+        try:
+            # Get table columns
+            cursor = conn.execute("PRAGMA table_info(survey_responses)")
+            columns = [row[1] for row in cursor.fetchall()]
+            
+            # Filter record_data to only include valid columns
+            valid_data = {k: v for k, v in record_data.items() if k in columns}
+            
+            if not valid_data:
+                logger.warning("No valid columns provided for record update")
+                return False
+            
+            # Create UPDATE query
+            set_clause = ', '.join([f'[{col}] = ?' for col in valid_data.keys()])
+            query = f"UPDATE survey_responses SET {set_clause} WHERE rowid = ?"
+            
+            cursor = conn.execute(query, list(valid_data.values()) + [rowid])
+            
+            if cursor.rowcount == 0:
+                logger.warning(f"No record found with rowid {rowid}")
+                return False
+                
+            conn.commit()
+            logger.info(f"Updated record with rowid {rowid}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Error updating record: {e}")
+            return False
+        finally:
+            conn.close()
+
+    def delete_record(self, rowid: int) -> bool:
+        """
+        Delete a record by rowid.
+        
+        Args:
+            rowid: The rowid of the record to delete.
+            
+        Returns:
+            True if successful, False otherwise.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.execute("DELETE FROM survey_responses WHERE rowid = ?", [rowid])
+            
+            if cursor.rowcount == 0:
+                logger.warning(f"No record found with rowid {rowid}")
+                return False
+                
+            conn.commit()
+            logger.info(f"Deleted record with rowid {rowid}")
+            return True
+            
+        except Exception as e:
+            logger.error(f"Error deleting record: {e}")
+            return False
+        finally:
+            conn.close()
+
+    def get_record_by_id(self, rowid: int) -> Optional[dict]:
+        """
+        Get a single record by rowid.
+        
+        Args:
+            rowid: The rowid of the record to retrieve.
+            
+        Returns:
+            Dictionary with record data or None if not found.
+        """
+        conn = self.get_connection()
+        try:
+            cursor = conn.execute("SELECT rowid, * FROM survey_responses WHERE rowid = ?", [rowid])
+            row = cursor.fetchone()
+            
+            if row:
+                # Convert sqlite3.Row to dictionary
+                return dict(row)
+            else:
+                return None
+                
+        except Exception as e:
+            logger.error(f"Error retrieving record: {e}")
+            return None
+        finally:
+            conn.close()
+
+    def get_all_data_with_ids(self) -> pd.DataFrame:
+        """
+        Get all survey data including rowid for CRUD operations.
+        
+        Returns:
+            DataFrame with all survey data including rowid column.
+        """
+        conn = self.get_connection()
+        try:
+            df = pd.read_sql_query("SELECT rowid, * FROM survey_responses", conn)
+            logger.info(f"Retrieved {len(df)} rows with IDs from survey_responses.")
+            return df
+        except Exception as e:
+            logger.error(f"Error retrieving data with IDs: {e}")
             return pd.DataFrame()
         finally:
             conn.close()
