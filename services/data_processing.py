@@ -145,6 +145,93 @@ def add_temporal_columns(df: pd.DataFrame, column: str = "Timestamp") -> pd.Data
 	return out
 
 
+def normalize_year_of_study(df: pd.DataFrame, column: str = "year_of_study") -> pd.DataFrame:
+	"""Normalize year of study values to consistent 'Year X' format.
+	
+	Handles various formats:
+	- "year 1", "Year 1", "YEAR 2" -> "Year 1", "Year 2"
+	- "1st year", "2nd year" -> "Year 1", "Year 2" 
+	- "first year", "second year" -> "Year 1", "Year 2"
+	- "1", "2", "3", "4" -> "Year 1", "Year 2", etc.
+	- Invalid/missing values -> "Unknown"
+	
+	Args:
+		df: DataFrame to process
+		column: Column name containing year of study data
+		
+	Returns:
+		DataFrame with normalized year of study values
+	"""
+	if column not in df.columns:
+		logger.debug(f"Column '{column}' not found in DataFrame, returning unchanged.")
+		return df.copy()
+	
+	logger.debug(f"Normalizing year of study values in column '{column}'.")
+	out = df.copy()
+	
+	def _normalize_year_value(value):
+		"""Helper function to normalize individual year values."""
+		if pd.isna(value) or str(value).strip() == "":
+			return "Unknown"
+		
+		# Convert to lowercase string for processing
+		val_str = str(value).lower().strip()
+		
+		# Direct year formats: "year 1", "year 2", etc.
+		if "year" in val_str:
+			if "1" in val_str:
+				return "Year 1"
+			elif "2" in val_str:
+				return "Year 2" 
+			elif "3" in val_str:
+				return "Year 3"
+			elif "4" in val_str:
+				return "Year 4"
+		
+		# Ordinal formats: "1st year", "2nd year", etc.
+		if any(ord_num in val_str for ord_num in ["1st", "2nd", "3rd", "4th"]):
+			if "1st" in val_str:
+				return "Year 1"
+			elif "2nd" in val_str:
+				return "Year 2"
+			elif "3rd" in val_str:
+				return "Year 3"
+			elif "4th" in val_str:
+				return "Year 4"
+		
+		# Written formats: "first year", "second year", etc.
+		written_years = {
+			"first": "Year 1",
+			"second": "Year 2", 
+			"third": "Year 3",
+			"fourth": "Year 4"
+		}
+		for written, standard in written_years.items():
+			if written in val_str:
+				return standard
+		
+		# Simple number formats: "1", "2", "3", "4"
+		if val_str in ["1", "2", "3", "4"]:
+			return f"Year {val_str}"
+		
+		# If none of the patterns match, return Unknown
+		logger.debug(f"Could not normalize year value: '{value}' -> 'Unknown'")
+		return "Unknown"
+	
+	try:
+		out[column] = out[column].apply(_normalize_year_value)
+		
+		# Log the normalization results
+		unique_values = out[column].unique()
+		logger.info(f"Normalized year of study values. Unique values: {sorted(unique_values)}")
+		
+	except Exception as e:
+		logger.error(f"Error normalizing year of study column '{column}': {e}")
+		raise
+	
+	return out
+
+
 def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
     """
     - Drop rows where 'depression' (or 'Do you have Depression?') is missing
@@ -293,6 +380,8 @@ def clean_data(filepath: str = None) -> pd.DataFrame:
 	5. Normalize yes/no columns
 	6. Add temporal columns
 	7. Fill missing values
+	8. Convert numeric columns to proper types
+	9. Normalize year of study values
 	
 	Args:
 		filepath: Path to CSV file. If None, uses RAW_DATA_PATH from config.
@@ -343,5 +432,62 @@ def clean_data(filepath: str = None) -> pd.DataFrame:
 	except Exception as e:
 		logger.warning(f"Numeric conversion failed: {e}; continuing")
 	
+	# Step 9: Normalize year of study values
+	try:
+		df = normalize_year_of_study(df)
+		logger.debug(f"Step 9: Normalized year of study values")
+	except Exception as e:
+		logger.warning(f"Year of study normalization failed: {e}; continuing")
+	
 	logger.info(f"Data cleaning complete. Final shape: {df.shape}")
 	return df
+
+
+if __name__ == "__main__":
+	"""Run data processing pipeline when script is executed directly."""
+	from db.repository import StudentMentalHealthRepository
+	from utils.config import DB_PATH
+	logger.info("STUDENT MENTAL HEALTH DATA PROCESSING PIPELINE")
+	
+	try:
+		# Step 1: Process the data
+		logger.info("Step 1: Processing raw data...")
+		df = clean_data()
+		logger.info("Data processing complete!")
+		logger.info(f"Final shape: {df.shape}")
+		
+		# Show year_of_study results
+		if "year_of_study" in df.columns:
+			unique_years = sorted(df["year_of_study"].unique())
+			logger.info(f"Year of study values: {unique_years}")
+			
+			year_counts = df["year_of_study"].value_counts().sort_index()
+			logger.info("Year of Study Distribution:")
+			for year, count in year_counts.items():
+				logger.info(f"• {year}: {count} students")
+		
+		# Step 2: Update database
+		logger.info(f"\nStep 2: Updating database at {DB_PATH}")
+		repo = StudentMentalHealthRepository(str(DB_PATH))
+		repo.init_tables()
+		
+		count = repo.insert_data(df, if_exists="replace")
+		logger.info(f"Successfully updated database with {count} rows")
+		
+		# Step 3: Verify database update
+		logger.info("\nStep 3: Verifying database update...")
+		db_df = repo.get_all_data()
+		logger.info(f"Database now contains {len(db_df)} rows")
+		
+		if "year_of_study" in db_df.columns:
+			db_unique_years = sorted(db_df["year_of_study"].unique())
+			logger.info(f"Database year_of_study values: {db_unique_years}")
+		
+		logger.info("\n" + "=" * 60)
+		logger.info("SUCCESS! Database updated with normalized year_of_study values")
+		logger.info("You can now run the Streamlit dashboard with updated data")
+		logger.info("=" * 60)
+		
+	except Exception as e:
+		logger.error(f"Pipeline failed: {e}")
+		raise

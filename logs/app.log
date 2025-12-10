@@ -2031,3 +2031,1144 @@
 2025-12-07 16:52:37 - db.repository - DEBUG - Column 'division' value counts: 3 unique values
 2025-12-07 16:52:37 - db.repository - DEBUG - Text search in 'university' for 'University' returned 2 rows
 2025-12-07 16:52:37 - db.repository - DEBUG - Text search in 'university' for 'BUET' returned 2 rows
+2025-12-07 17:11:23 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:23 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:23 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:23 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:23 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-07 17:11:27 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:27 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:27 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:27 - db.repository - DEBUG - Filter returned 279 rows with 1 conditions
+2025-12-07 17:11:27 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(140), 'no_count': np.int64(139), 'total': 279, 'yes_percentage': np.float64(50.18), 'no_percentage': np.float64(49.82)}
+2025-12-07 17:11:29 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:29 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:29 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:29 - db.repository - DEBUG - Filter returned 264 rows with 1 conditions
+2025-12-07 17:11:29 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(132), 'no_count': np.int64(132), 'total': 264, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-07 17:11:33 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:33 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:33 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:33 - db.repository - DEBUG - Filter returned 27 rows with 1 conditions
+2025-12-07 17:11:33 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(12), 'no_count': np.int64(15), 'total': 27, 'yes_percentage': np.float64(44.44), 'no_percentage': np.float64(55.56)}
+2025-12-07 17:11:40 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:40 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:40 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:40 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:40 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-07 17:11:42 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:42 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:42 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:42 - db.repository - DEBUG - Filter returned 67 rows with 1 conditions
+2025-12-07 17:11:42 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(29), 'no_count': np.int64(38), 'total': 67, 'yes_percentage': np.float64(43.28), 'no_percentage': np.float64(56.72)}
+2025-12-07 17:11:46 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:46 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:46 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:46 - db.repository - DEBUG - Filter returned 29 rows with 2 conditions
+2025-12-07 17:11:46 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(29), 'no_count': np.int64(0), 'total': 29, 'yes_percentage': np.float64(100.0), 'no_percentage': np.float64(0.0)}
+2025-12-07 17:11:52 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:52 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:52 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:52 - db.repository - DEBUG - Filter returned 67 rows with 1 conditions
+2025-12-07 17:11:52 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(29), 'no_count': np.int64(38), 'total': 67, 'yes_percentage': np.float64(43.28), 'no_percentage': np.float64(56.72)}
+2025-12-07 17:11:56 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:56 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:56 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:56 - db.repository - DEBUG - Filter returned 3 rows with 2 conditions
+2025-12-07 17:11:56 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(3), 'no_count': np.int64(0), 'total': 3, 'yes_percentage': np.float64(100.0), 'no_percentage': np.float64(0.0)}
+2025-12-07 17:11:59 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:11:59 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:11:59 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:11:59 - db.repository - DEBUG - Filter returned 34 rows with 2 conditions
+2025-12-07 17:11:59 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(14), 'no_count': np.int64(20), 'total': 34, 'yes_percentage': np.float64(41.18), 'no_percentage': np.float64(58.82)}
+2025-12-07 17:12:03 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:12:03 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:12:03 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:12:03 - db.repository - DEBUG - Filter returned 20 rows with 2 conditions
+2025-12-07 17:12:03 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(13), 'no_count': np.int64(7), 'total': 20, 'yes_percentage': np.float64(65.0), 'no_percentage': np.float64(35.0)}
+2025-12-07 17:12:07 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-07 17:12:07 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-07 17:12:07 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-07 17:12:07 - db.repository - DEBUG - Filter returned 279 rows with 1 conditions
+2025-12-07 17:12:07 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(140), 'no_count': np.int64(139), 'total': 279, 'yes_percentage': np.float64(50.18), 'no_percentage': np.float64(49.82)}
+2025-12-08 00:34:44 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-08 00:34:44 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-08 00:34:44 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-08 00:34:44 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-08 00:34:44 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-08 01:07:26 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_prevalence
+2025-12-08 01:07:27 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_by_gender
+2025-12-08 01:07:27 - services.visualization - WARNING - Columns ['gender'] not found in DataFrame for plot_depression_by_gender
+2025-12-08 01:07:27 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_by_division
+2025-12-08 01:07:27 - services.visualization - WARNING - Columns ['division'] not found in DataFrame for plot_depression_by_division
+2025-12-08 01:07:27 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_by_year_of_study
+2025-12-08 01:07:28 - services.visualization - WARNING - Columns ['year_of_study'] not found in DataFrame for plot_depression_by_year_of_study
+2025-12-08 01:07:28 - services.visualization - WARNING - Empty DataFrame provided to plot_monthly_depression_trend
+2025-12-08 01:07:28 - services.visualization - WARNING - Columns ['timestamp'] not found in DataFrame for plot_monthly_depression_trend
+2025-12-08 17:50:40 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-08 17:50:40 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-08 17:50:40 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-08 17:50:40 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-08 17:50:40 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-08 17:50:47 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-08 17:50:47 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-08 17:50:47 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-08 17:50:47 - db.repository - DEBUG - Filter returned 279 rows with 1 conditions
+2025-12-08 17:50:47 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(140), 'no_count': np.int64(139), 'total': 279, 'yes_percentage': np.float64(50.18), 'no_percentage': np.float64(49.82)}
+2025-12-10 14:44:39 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:44:39 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 14:44:39 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 14:44:39 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:44:39 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 14:44:40 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 14:45:17 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:45:17 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 14:45:17 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 14:45:17 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:45:17 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 14:45:18 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 14:46:22 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:46:22 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 14:46:22 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 14:46:22 - db.repository - DEBUG - Filter returned 279 rows with 1 conditions
+2025-12-10 14:46:22 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(140), 'no_count': np.int64(139), 'total': 279, 'yes_percentage': np.float64(50.18), 'no_percentage': np.float64(49.82)}
+2025-12-10 14:46:22 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 10. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 14:46:28 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:46:28 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 14:46:28 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 14:46:28 - db.repository - DEBUG - Filter returned 264 rows with 1 conditions
+2025-12-10 14:46:28 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(132), 'no_count': np.int64(132), 'total': 264, 'yes_percentage': np.float64(50.0), 'no_percentage': np.float64(50.0)}
+2025-12-10 14:46:29 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 14:46:33 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:46:33 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 14:46:33 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 14:46:33 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:46:33 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 14:46:34 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 14:46:51 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-10 14:46:51 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 14:46:51 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 14:46:51 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 14:46:51 - services.data_processing - DEBUG - No duplicates found.
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 14:46:51 - services.data_processing - INFO - Standardized 16 column name(s).
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 14:46:51 - services.data_processing - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 14:46:51 - services.data_processing - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: university
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: course
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 14:46:51 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 14:46:51 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 14:46:51 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 30 missing values in column: division
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 28 missing values in column: university
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 28 missing values in column: course
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Converted age to float64
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 14:46:51 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 14:46:51 - services.data_processing - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 14:46:51 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-10 14:46:51 - db.repository - DEBUG - Converting nullable integer column 'year' to float (for SQLite)
+2025-12-10 14:46:51 - db.repository - DEBUG - Converting nullable integer column 'month' to float (for SQLite)
+2025-12-10 14:46:51 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-10 14:46:51 - __main__ - INFO - Loaded 570 cleaned rows into DB from Streamlit.
+2025-12-10 14:46:51 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:46:51 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 14:46:51 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 14:46:51 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 14:46:51 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 14:46:52 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 16:44:20 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:44:20 - services.data_processing - DEBUG - Could not normalize year value: 'invalid' -> 'Unknown'
+2025-12-10 16:44:20 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:44:20 - services.data_processing - DEBUG - Column 'year_of_study' not found in DataFrame, returning unchanged.
+2025-12-10 16:44:27 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-10 16:44:27 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-25\test_load_data_valid_csv0\test_data.csv
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Trying alternative formats for 2 timestamps
+2025-12-10 16:44:27 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully converted 1 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Trying alternative formats for 2 timestamps
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully converted 2 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-10 16:44:27 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:44:27 - services.data_processing - INFO - Dropped 1 rows with missing Do you have Depression? value.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-10 16:44:27 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-10 16:44:27 - services.data_processing - INFO - Standardized 2 column name(s).
+2025-12-10 16:44:27 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 16:44:27 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-25\test_clean_data_pipeline_end_t0\raw.csv
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully loaded 3 rows and 4 columns.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Step 1: Loaded 3 rows
+2025-12-10 16:44:27 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Step 2: After removing duplicates: 2 rows
+2025-12-10 16:44:27 - services.data_processing - INFO - Standardized 4 column name(s).
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Trying alternative formats for 2 timestamps
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully converted 2 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Auto-detected object columns: ['depression', 'gender', 'division']
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:44:27 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:44:27 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:44:27 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Filled 1 missing values in column: division
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Column 'year_of_study' not found in DataFrame, returning unchanged.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:44:27 - services.data_processing - INFO - Data cleaning complete. Final shape: (1, 7)
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Could not normalize year value: 'invalid' -> 'Unknown'
+2025-12-10 16:44:27 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:44:27 - services.data_processing - DEBUG - Column 'year_of_study' not found in DataFrame, returning unchanged.
+2025-12-10 16:46:20 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:46:20 - services.data_processing - DEBUG - Could not normalize year value: 'invalid' -> 'Unknown'
+2025-12-10 16:46:20 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:46:43 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 16:46:43 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\tmp2remzz7l.csv
+2025-12-10 16:46:43 - services.data_processing - INFO - Successfully loaded 1 rows and 5 columns.
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Step 1: Loaded 1 rows
+2025-12-10 16:46:43 - services.data_processing - DEBUG - No duplicates found.
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Step 2: After removing duplicates: 1 rows
+2025-12-10 16:46:43 - services.data_processing - INFO - Standardized 5 column name(s).
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Trying alternative formats for 1 timestamps
+2025-12-10 16:46:43 - services.data_processing - INFO - Successfully converted 1 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Auto-detected object columns: ['depression', 'gender', 'division', 'year_of_study']
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 16:46:43 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:46:43 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:46:43 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Year 1']
+2025-12-10 16:46:43 - services.data_processing - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:46:43 - services.data_processing - INFO - Data cleaning complete. Final shape: (1, 8)
+2025-12-10 16:46:51 - services.data_processing - ERROR - Data file not found: \nonexistent\path\file.csv
+2025-12-10 16:46:51 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-26\test_load_data_valid_csv0\test_data.csv
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully loaded 2 rows and 3 columns.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Trying alternative formats for 2 timestamps
+2025-12-10 16:46:51 - services.data_processing - WARNING - Converted 1 invalid timestamp(s) to NaT.
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully converted 1 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Auto-detected object columns: ['Do you have Depression?', 'Do you have Anxiety?']
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Depression?
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: Do you have Anxiety?
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Converting column 'Timestamp' to datetime.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Trying alternative formats for 2 timestamps
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully converted 2 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Adding temporal columns from 'Timestamp'.
+2025-12-10 16:46:51 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:46:51 - services.data_processing - INFO - Dropped 1 rows with missing Do you have Depression? value.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Filled 2 missing values in column: Division
+2025-12-10 16:46:51 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-10 16:46:51 - services.data_processing - INFO - Standardized 2 column name(s).
+2025-12-10 16:46:51 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 16:46:51 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\AppData\Local\Temp\pytest-of-Lenovo\pytest-26\test_clean_data_pipeline_end_t0\raw.csv
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully loaded 3 rows and 4 columns.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Step 1: Loaded 3 rows
+2025-12-10 16:46:51 - services.data_processing - INFO - Removed 1 duplicate row(s).
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Step 2: After removing duplicates: 2 rows
+2025-12-10 16:46:51 - services.data_processing - INFO - Standardized 4 column name(s).
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Trying alternative formats for 2 timestamps
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully converted 2 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Auto-detected object columns: ['depression', 'gender', 'division']
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:46:51 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:46:51 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:46:51 - services.data_processing - INFO - Dropped 1 rows with missing depression value.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Filled 1 missing values in column: division
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Column 'year_of_study' not found in DataFrame, returning unchanged.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:46:51 - services.data_processing - INFO - Data cleaning complete. Final shape: (1, 7)
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Could not normalize year value: 'invalid' -> 'Unknown'
+2025-12-10 16:46:51 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:46:51 - services.data_processing - DEBUG - Column 'year_of_study' not found in DataFrame, returning unchanged.
+2025-12-10 16:46:51 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_prevalence
+2025-12-10 16:46:52 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_by_gender
+2025-12-10 16:46:52 - services.visualization - WARNING - Columns ['gender'] not found in DataFrame for plot_depression_by_gender
+2025-12-10 16:46:52 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_by_division
+2025-12-10 16:46:52 - services.visualization - WARNING - Columns ['division'] not found in DataFrame for plot_depression_by_division
+2025-12-10 16:46:53 - services.visualization - WARNING - Empty DataFrame provided to plot_depression_by_year_of_study
+2025-12-10 16:46:53 - services.visualization - WARNING - Columns ['year_of_study'] not found in DataFrame for plot_depression_by_year_of_study
+2025-12-10 16:46:53 - services.visualization - WARNING - Empty DataFrame provided to plot_monthly_depression_trend
+2025-12-10 16:46:53 - services.visualization - WARNING - Columns ['timestamp'] not found in DataFrame for plot_monthly_depression_trend
+2025-12-10 16:47:49 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:47:49 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 16:47:49 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 16:47:49 - db.repository - DEBUG - Found 9 unique values in column 'year_of_study'
+2025-12-10 16:47:49 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:47:49 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 16:47:50 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 16:48:14 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:48:14 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 16:48:14 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 16:48:14 - db.repository - DEBUG - Found 9 unique values in column 'year_of_study'
+2025-12-10 16:48:14 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:48:14 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 16:48:15 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 16:48:16 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:48:16 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 16:48:16 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 16:48:16 - db.repository - DEBUG - Found 9 unique values in column 'year_of_study'
+2025-12-10 16:48:16 - db.repository - DEBUG - Filter returned 60 rows with 1 conditions
+2025-12-10 16:48:16 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(33), 'no_count': np.int64(27), 'total': 60, 'yes_percentage': np.float64(55.0), 'no_percentage': np.float64(45.0)}
+2025-12-10 16:48:17 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 47. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 16:48:19 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:48:19 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 16:48:19 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 16:48:19 - db.repository - DEBUG - Found 9 unique values in column 'year_of_study'
+2025-12-10 16:48:19 - db.repository - DEBUG - Filter returned 62 rows with 1 conditions
+2025-12-10 16:48:19 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(36), 'no_count': np.int64(26), 'total': 62, 'yes_percentage': np.float64(58.06), 'no_percentage': np.float64(41.94)}
+2025-12-10 16:48:20 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 14. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 16:56:09 - __main__ - INFO - ============================================================
+2025-12-10 16:56:09 - __main__ - INFO - STUDENT MENTAL HEALTH DATA PROCESSING PIPELINE
+2025-12-10 16:56:09 - __main__ - INFO - ============================================================
+2025-12-10 16:56:09 - __main__ - INFO - Starting data cleaning pipeline...
+2025-12-10 16:56:09 - __main__ - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 16:56:09 - __main__ - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 16:56:09 - __main__ - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 16:56:09 - __main__ - DEBUG - No duplicates found.
+2025-12-10 16:56:09 - __main__ - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 16:56:09 - __main__ - INFO - Standardized 16 column name(s).
+2025-12-10 16:56:09 - __main__ - DEBUG - Step 3: Standardized column names
+2025-12-10 16:56:09 - __main__ - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:56:09 - __main__ - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 16:56:09 - __main__ - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 16:56:09 - __main__ - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:56:09 - __main__ - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: university
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: course
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 16:56:09 - __main__ - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:56:09 - __main__ - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:56:09 - __main__ - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:56:09 - __main__ - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:56:09 - __main__ - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 30 missing values in column: division
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 28 missing values in column: university
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 28 missing values in column: course
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 16:56:09 - __main__ - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 16:56:09 - __main__ - DEBUG - Converted age to float64
+2025-12-10 16:56:09 - __main__ - DEBUG - Converted year to Int64
+2025-12-10 16:56:09 - __main__ - DEBUG - Converted month to Int64
+2025-12-10 16:56:09 - __main__ - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:56:09 - __main__ - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:56:09 - __main__ - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:56:09 - __main__ - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:56:09 - __main__ - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 16:56:09 - __main__ - INFO - Final shape: (570, 19)
+2025-12-10 16:56:09 - __main__ - INFO - Year of study values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:56:09 - __main__ - INFO - • Unknown: 30 students
+2025-12-10 16:56:09 - __main__ - INFO - • Year 1: 141 students
+2025-12-10 16:56:09 - __main__ - INFO - • Year 2: 137 students
+2025-12-10 16:56:09 - __main__ - INFO - • Year 3: 122 students
+2025-12-10 16:56:09 - __main__ - INFO - • Year 4: 140 students
+2025-12-10 16:56:09 - __main__ - INFO - Available columns: timestamp, depression, gender, division, year_of_study
+2025-12-10 16:56:09 - __main__ - INFO - Sample records: 570 total rows
+2025-12-10 16:56:09 - __main__ - INFO - ============================================================
+2025-12-10 16:57:18 - __main__ - INFO - ============================================================
+2025-12-10 16:57:18 - __main__ - INFO - STUDENT MENTAL HEALTH DATA PROCESSING PIPELINE
+2025-12-10 16:57:18 - __main__ - INFO - ============================================================
+2025-12-10 16:57:18 - __main__ - INFO - Starting data cleaning pipeline...
+2025-12-10 16:57:18 - __main__ - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 16:57:18 - __main__ - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 16:57:18 - __main__ - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 16:57:18 - __main__ - DEBUG - No duplicates found.
+2025-12-10 16:57:18 - __main__ - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 16:57:18 - __main__ - INFO - Standardized 16 column name(s).
+2025-12-10 16:57:18 - __main__ - DEBUG - Step 3: Standardized column names
+2025-12-10 16:57:18 - __main__ - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:57:18 - __main__ - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 16:57:18 - __main__ - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 16:57:18 - __main__ - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:57:18 - __main__ - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: university
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: course
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 16:57:18 - __main__ - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:57:18 - __main__ - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:57:18 - __main__ - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:57:18 - __main__ - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:57:18 - __main__ - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 30 missing values in column: division
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 28 missing values in column: university
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 28 missing values in column: course
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 16:57:18 - __main__ - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 16:57:18 - __main__ - DEBUG - Converted age to float64
+2025-12-10 16:57:18 - __main__ - DEBUG - Converted year to Int64
+2025-12-10 16:57:18 - __main__ - DEBUG - Converted month to Int64
+2025-12-10 16:57:18 - __main__ - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:57:18 - __main__ - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:57:18 - __main__ - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:57:18 - __main__ - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:57:18 - __main__ - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 16:57:18 - __main__ - INFO - Final shape: (570, 19)
+2025-12-10 16:57:18 - __main__ - INFO - Year of study values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:57:18 - __main__ - INFO - • Unknown: 30 students
+2025-12-10 16:57:18 - __main__ - INFO - • Year 1: 141 students
+2025-12-10 16:57:18 - __main__ - INFO - • Year 2: 137 students
+2025-12-10 16:57:18 - __main__ - INFO - • Year 3: 122 students
+2025-12-10 16:57:18 - __main__ - INFO - • Year 4: 140 students
+2025-12-10 16:57:18 - __main__ - INFO - Available columns: timestamp, depression, gender, division, year_of_study
+2025-12-10 16:57:18 - __main__ - INFO - Sample records: 570 total rows
+2025-12-10 16:57:18 - __main__ - INFO - ============================================================
+2025-12-10 16:58:25 - __main__ - INFO - ============================================================
+2025-12-10 16:58:25 - __main__ - INFO - STUDENT MENTAL HEALTH DATA PROCESSING PIPELINE
+2025-12-10 16:58:25 - __main__ - INFO - ============================================================
+2025-12-10 16:58:25 - __main__ - INFO - Step 1: Processing raw data...
+2025-12-10 16:58:25 - __main__ - INFO - Starting data cleaning pipeline...
+2025-12-10 16:58:25 - __main__ - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 16:58:25 - __main__ - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 16:58:25 - __main__ - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 16:58:25 - __main__ - DEBUG - No duplicates found.
+2025-12-10 16:58:25 - __main__ - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 16:58:25 - __main__ - INFO - Standardized 16 column name(s).
+2025-12-10 16:58:25 - __main__ - DEBUG - Step 3: Standardized column names
+2025-12-10 16:58:25 - __main__ - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:58:25 - __main__ - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 16:58:25 - __main__ - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 16:58:25 - __main__ - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:58:25 - __main__ - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: university
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: course
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 16:58:25 - __main__ - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:58:25 - __main__ - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:58:25 - __main__ - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:58:25 - __main__ - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:58:25 - __main__ - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 30 missing values in column: division
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 28 missing values in column: university
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 28 missing values in column: course
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 16:58:25 - __main__ - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 16:58:25 - __main__ - DEBUG - Converted age to float64
+2025-12-10 16:58:25 - __main__ - DEBUG - Converted year to Int64
+2025-12-10 16:58:25 - __main__ - DEBUG - Converted month to Int64
+2025-12-10 16:58:25 - __main__ - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:58:25 - __main__ - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:25 - __main__ - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:58:25 - __main__ - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:58:25 - __main__ - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 16:58:25 - __main__ - INFO - Final shape: (570, 19)
+2025-12-10 16:58:25 - __main__ - INFO - Year of study values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:58:25 - __main__ - INFO - • Unknown: 30 students
+2025-12-10 16:58:25 - __main__ - INFO - • Year 1: 141 students
+2025-12-10 16:58:25 - __main__ - INFO - • Year 2: 137 students
+2025-12-10 16:58:25 - __main__ - INFO - • Year 3: 122 students
+2025-12-10 16:58:25 - __main__ - INFO - • Year 4: 140 students
+2025-12-10 16:58:25 - __main__ - INFO - 
+Step 2: Updating database at C:\Users\Lenovo\Desktop\student_mental_health_dashboard\db\student_mental_health.db
+2025-12-10 16:58:25 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-10 16:58:25 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-10 16:58:25 - db.repository - DEBUG - Converting nullable integer column 'year' to float (for SQLite)
+2025-12-10 16:58:25 - db.repository - DEBUG - Converting nullable integer column 'month' to float (for SQLite)
+2025-12-10 16:58:25 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-10 16:58:25 - __main__ - INFO - 
+Step 3: Verifying database update...
+2025-12-10 16:58:25 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:58:25 - __main__ - INFO - 
+============================================================
+2025-12-10 16:58:25 - __main__ - INFO - ============================================================
+2025-12-10 16:58:31 - __main__ - INFO - ============================================================
+2025-12-10 16:58:31 - __main__ - INFO - STUDENT MENTAL HEALTH DATA PROCESSING PIPELINE
+2025-12-10 16:58:31 - __main__ - INFO - ============================================================
+2025-12-10 16:58:31 - __main__ - INFO - Step 1: Processing raw data...
+2025-12-10 16:58:31 - __main__ - INFO - Starting data cleaning pipeline...
+2025-12-10 16:58:31 - __main__ - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 16:58:31 - __main__ - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 16:58:31 - __main__ - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 16:58:31 - __main__ - DEBUG - No duplicates found.
+2025-12-10 16:58:31 - __main__ - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 16:58:31 - __main__ - INFO - Standardized 16 column name(s).
+2025-12-10 16:58:31 - __main__ - DEBUG - Step 3: Standardized column names
+2025-12-10 16:58:31 - __main__ - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 16:58:31 - __main__ - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 16:58:31 - __main__ - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 16:58:31 - __main__ - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 16:58:31 - __main__ - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: division
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: university
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: course
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 16:58:31 - __main__ - INFO - Successfully normalized yes/no columns.
+2025-12-10 16:58:31 - __main__ - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 16:58:31 - __main__ - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 16:58:31 - __main__ - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 16:58:31 - __main__ - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 30 missing values in column: division
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 28 missing values in column: university
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 28 missing values in column: course
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 16:58:31 - __main__ - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 16:58:31 - __main__ - DEBUG - Converted age to float64
+2025-12-10 16:58:31 - __main__ - DEBUG - Converted year to Int64
+2025-12-10 16:58:31 - __main__ - DEBUG - Converted month to Int64
+2025-12-10 16:58:31 - __main__ - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 16:58:31 - __main__ - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 16:58:31 - __main__ - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:58:31 - __main__ - DEBUG - Step 9: Normalized year of study values
+2025-12-10 16:58:31 - __main__ - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 16:58:31 - __main__ - INFO - Final shape: (570, 19)
+2025-12-10 16:58:31 - __main__ - INFO - Year of study values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 16:58:31 - __main__ - INFO - • Unknown: 30 students
+2025-12-10 16:58:31 - __main__ - INFO - • Year 1: 141 students
+2025-12-10 16:58:31 - __main__ - INFO - • Year 2: 137 students
+2025-12-10 16:58:31 - __main__ - INFO - • Year 3: 122 students
+2025-12-10 16:58:31 - __main__ - INFO - • Year 4: 140 students
+2025-12-10 16:58:31 - __main__ - INFO - 
+Step 2: Updating database at C:\Users\Lenovo\Desktop\student_mental_health_dashboard\db\student_mental_health.db
+2025-12-10 16:58:31 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-10 16:58:31 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-10 16:58:31 - db.repository - DEBUG - Converting nullable integer column 'year' to float (for SQLite)
+2025-12-10 16:58:31 - db.repository - DEBUG - Converting nullable integer column 'month' to float (for SQLite)
+2025-12-10 16:58:31 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-10 16:58:31 - __main__ - INFO - 
+Step 3: Verifying database update...
+2025-12-10 16:58:31 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 16:58:31 - __main__ - INFO - 
+============================================================
+2025-12-10 16:58:31 - __main__ - INFO - ============================================================
+2025-12-10 17:02:34 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:02:34 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:02:34 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:02:34 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:02:34 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:02:34 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 17:02:35 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 17:02:39 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:02:39 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:02:39 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:02:39 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:02:39 - db.repository - DEBUG - Filter returned 141 rows with 1 conditions
+2025-12-10 17:02:39 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(75), 'no_count': np.int64(66), 'total': 141, 'yes_percentage': np.float64(53.19), 'no_percentage': np.float64(46.81)}
+2025-12-10 17:02:39 - services.visualization - WARNING - Error converting timestamp to datetime: Unknown datetime string format, unable to parse: Unknown, at position 0
+2025-12-10 17:02:41 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:02:41 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:02:41 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:02:41 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:02:41 - db.repository - DEBUG - Filter returned 137 rows with 1 conditions
+2025-12-10 17:02:41 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(64), 'no_count': np.int64(73), 'total': 137, 'yes_percentage': np.float64(46.72), 'no_percentage': np.float64(53.28)}
+2025-12-10 17:02:41 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 5. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 17:02:43 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:02:43 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:02:43 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:02:43 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:02:43 - db.repository - DEBUG - Filter returned 140 rows with 1 conditions
+2025-12-10 17:02:43 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(59), 'no_count': np.int64(81), 'total': 140, 'yes_percentage': np.float64(42.14), 'no_percentage': np.float64(57.86)}
+2025-12-10 17:02:43 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 25. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 17:04:53 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:04:53 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:04:53 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:04:53 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:04:53 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:04:53 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 17:04:54 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 17:23:37 - app.dashboard - INFO - Initializing database with cleaned data...
+2025-12-10 17:23:37 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 17:23:37 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 17:23:37 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 17:23:37 - services.data_processing - DEBUG - No duplicates found.
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 17:23:37 - services.data_processing - INFO - Standardized 16 column name(s).
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 17:23:37 - services.data_processing - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 17:23:37 - services.data_processing - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: university
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: course
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 17:23:37 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 17:23:37 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 17:23:37 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 30 missing values in column: division
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 28 missing values in column: university
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 28 missing values in column: course
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Converted age to float64
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:37 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 17:23:37 - services.data_processing - DEBUG - Step 9: Normalized year of study values
+2025-12-10 17:23:37 - services.data_processing - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 17:23:37 - app.dashboard - INFO - Cleaned data: (570, 19) rows
+2025-12-10 17:23:37 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-10 17:23:37 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-10 17:23:37 - db.repository - DEBUG - Converting nullable integer column 'year' to float (for SQLite)
+2025-12-10 17:23:37 - db.repository - DEBUG - Converting nullable integer column 'month' to float (for SQLite)
+2025-12-10 17:23:37 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-10 17:23:37 - app.dashboard - INFO - Database initialized with 570 rows
+2025-12-10 17:23:49 - __main__ - INFO - Initializing database with cleaned data...
+2025-12-10 17:23:49 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 17:23:49 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 17:23:49 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 17:23:49 - services.data_processing - DEBUG - No duplicates found.
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 17:23:49 - services.data_processing - INFO - Standardized 16 column name(s).
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 17:23:49 - services.data_processing - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 17:23:49 - services.data_processing - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: university
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: course
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 17:23:49 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 17:23:49 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 17:23:49 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 30 missing values in column: division
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 28 missing values in column: university
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 28 missing values in column: course
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Converted age to float64
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:23:49 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 17:23:49 - services.data_processing - DEBUG - Step 9: Normalized year of study values
+2025-12-10 17:23:49 - services.data_processing - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 17:23:49 - __main__ - INFO - Cleaned data: (570, 19) rows
+2025-12-10 17:23:49 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-10 17:23:49 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-10 17:23:49 - db.repository - DEBUG - Converting nullable integer column 'year' to float (for SQLite)
+2025-12-10 17:23:49 - db.repository - DEBUG - Converting nullable integer column 'month' to float (for SQLite)
+2025-12-10 17:23:49 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-10 17:23:49 - __main__ - INFO - Database initialized with 570 rows
+2025-12-10 17:23:49 - __main__ - INFO - Dashboard database initialization complete
+2025-12-10 17:23:49 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:23:49 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:23:49 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:23:49 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:23:49 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 17:23:50 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+2025-12-10 17:52:47 - __main__ - INFO - Initializing database with cleaned data...
+2025-12-10 17:52:47 - services.data_processing - INFO - Starting data cleaning pipeline...
+2025-12-10 17:52:47 - services.data_processing - INFO - Loading data from: C:\Users\Lenovo\Desktop\student_mental_health_dashboard\data\raw\Student_Mental_Health.csv
+2025-12-10 17:52:47 - services.data_processing - INFO - Successfully loaded 600 rows and 16 columns.
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Step 1: Loaded 600 rows
+2025-12-10 17:52:47 - services.data_processing - DEBUG - No duplicates found.
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Step 2: After removing duplicates: 600 rows
+2025-12-10 17:52:47 - services.data_processing - INFO - Standardized 16 column name(s).
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Step 3: Standardized column names
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Converting column 'timestamp' to datetime.
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Trying alternative formats for 30 timestamps
+2025-12-10 17:52:47 - services.data_processing - WARNING - Converted 30 invalid timestamp(s) to NaT.
+2025-12-10 17:52:47 - services.data_processing - INFO - Successfully converted 570 timestamps to datetime (European format: dd.mm.yyyy hh:mm).
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Auto-detected object columns: ['gender', 'division', 'university', 'living_situation', 'course', 'year_of_study', 'cgpa', 'financial_stress_level', 'marital_status', 'depression', 'anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_specialist_treatment']
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: gender
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: division
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: university
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: living_situation
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: course
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: year_of_study
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: cgpa
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: financial_stress_level
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: marital_status
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: depression
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: anxiety
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: panic_attack
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: family_history_mental_illness
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalized yes/no values in column: sought_specialist_treatment
+2025-12-10 17:52:47 - services.data_processing - INFO - Successfully normalized yes/no columns.
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Step 5: Normalized yes/no columns
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Adding temporal columns from 'timestamp'.
+2025-12-10 17:52:47 - services.data_processing - INFO - Added temporal columns: year, month, day_of_week.
+2025-12-10 17:52:47 - services.data_processing - INFO - Dropped 30 rows with missing depression value.
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 27 missing values in column: timestamp
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 27 missing values in column: gender
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 30 missing values in column: division
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 28 missing values in column: university
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 29 missing values in column: living_situation
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 28 missing values in column: course
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 30 missing values in column: year_of_study
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 29 missing values in column: cgpa
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 29 missing values in column: financial_stress_level
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 28 missing values in column: marital_status
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 27 missing values in column: anxiety
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 30 missing values in column: panic_attack
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 29 missing values in column: family_history_mental_illness
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 29 missing values in column: sought_specialist_treatment
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Filled 27 missing values in column: day_of_week
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Converted age to float64
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Converted year to Int64
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Converted month to Int64
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Step 8: Converted numeric columns to proper types
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Normalizing year of study values in column 'year_of_study'.
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Could not normalize year value: 'Unknown' -> 'Unknown'
+2025-12-10 17:52:47 - services.data_processing - INFO - Normalized year of study values. Unique values: ['Unknown', 'Year 1', 'Year 2', 'Year 3', 'Year 4']
+2025-12-10 17:52:47 - services.data_processing - DEBUG - Step 9: Normalized year of study values
+2025-12-10 17:52:47 - services.data_processing - INFO - Data cleaning complete. Final shape: (570, 19)
+2025-12-10 17:52:47 - __main__ - INFO - Cleaned data: (570, 19) rows
+2025-12-10 17:52:47 - db.repository - INFO - Created survey_responses table (if not exists).
+2025-12-10 17:52:47 - db.repository - DEBUG - Converting Timestamp column 'timestamp' to ISO string
+2025-12-10 17:52:47 - db.repository - DEBUG - Converting nullable integer column 'year' to float (for SQLite)
+2025-12-10 17:52:47 - db.repository - DEBUG - Converting nullable integer column 'month' to float (for SQLite)
+2025-12-10 17:52:47 - db.repository - INFO - Inserted data into survey_responses; total rows = 570
+2025-12-10 17:52:47 - __main__ - INFO - Database initialized with 570 rows
+2025-12-10 17:52:47 - __main__ - INFO - Dashboard database initialization complete
+2025-12-10 17:52:47 - db.repository - DEBUG - Found 3 unique values in column 'gender'
+2025-12-10 17:52:47 - db.repository - DEBUG - Found 9 unique values in column 'division'
+2025-12-10 17:52:47 - db.repository - DEBUG - Found 5 unique values in column 'year_of_study'
+2025-12-10 17:52:47 - db.repository - INFO - Retrieved 570 rows from survey_responses.
+2025-12-10 17:52:47 - services.analysis - DEBUG - Prevalence for depression: {'yes_count': np.int64(284), 'no_count': np.int64(286), 'total': 570, 'yes_percentage': np.float64(49.82), 'no_percentage': np.float64(50.18)}
+2025-12-10 17:52:48 - services.visualization - WARNING - Error converting timestamp to datetime: time data "Unknown" doesn't match format "%Y-%m-%d %H:%M:%S", at position 4. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
