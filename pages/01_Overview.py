@@ -16,6 +16,7 @@ from services.overview_analysis import (
     plot_depression_by_division_bar,
     plot_risk_profile_radar
 )
+from services.visualization import plot_depression_choropleth
 
 # Page configuration
 st.title("📊 Overview")
@@ -86,6 +87,17 @@ try:
     st.write("**Depression by Academic Division**")
     fig3 = plot_depression_by_division_bar(df)
     st.pyplot(fig3)
+    
+    st.write("**Geographic Distribution of Depression Rates**")
+    try:
+        choropleth_fig = plot_depression_choropleth(df)
+        if choropleth_fig is not None:
+            st.plotly_chart(choropleth_fig, width="stretch")
+        else:
+            st.info("Interactive choropleth map could not be created. This may be due to missing geographic data or technical limitations.")
+    except Exception as e:
+        st.warning(f"Could not create geographic map: {e}")
+        st.info("Geographic visualization requires valid Bangladesh division data.")
     
     st.write("**Mental Health Risk Profile**")
     fig4 = plot_risk_profile_radar(df)
