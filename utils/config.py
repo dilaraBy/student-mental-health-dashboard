@@ -6,6 +6,7 @@ PROJECT_ROOT = Path(__file__).parent.parent  #this will point to the project roo
 
 DATA_DIR = PROJECT_ROOT / "data"
 RAW_DATA_PATH = DATA_DIR / "raw" / "Student_Mental_Health.csv"
+GEOJSON_PATH = DATA_DIR / "raw" / "bangladesh_geojson_adm1_8_divisions_bibhags.json"
 
 DB_DIR = PROJECT_ROOT / "db"
 DB_PATH = DB_DIR / "student_mental_health.db"

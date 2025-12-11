@@ -2,7 +2,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.figure
+from typing import Dict, Any, Optional
+import plotly.express as px
+import plotly.graph_objects as go
 from utils.logger import get_logger
+from services.geographic_analysis import GeographicAnalysisService
 
 logger = get_logger(__name__)
 
@@ -298,3 +302,137 @@ def plot_monthly_depression_trend(df: pd.DataFrame) -> matplotlib.figure.Figure:
 
 
 
+
+
+def plot_depression_choropleth(df: pd.DataFrame) -> Optional[go.Figure]:
+    """
+    Create a choropleth map showing depression rates by Bangladesh division.
+    
+    Args:
+        df: DataFrame with mental health survey data including 'division' and 'depression' columns
+        
+    Returns:
+        plotly.graph_objects.Figure: Interactive choropleth map visualization
+    """
+    logger.info("Creating Bangladesh choropleth map for depression rates")
+    
+    # Initialize geographic analysis service
+    geo_service = GeographicAnalysisService()
+    
+    # Load GeoJSON data
+    geojson_data = geo_service.load_bangladesh_geojson()
+    
+    if not geojson_data:
+        logger.error("Could not load GeoJSON data - creating empty map")
+        fig = go.Figure()
+        fig.update_layout(
+            title="Bangladesh Depression Rates Map - Data Not Available",
+            annotations=[
+                dict(
+                    text="GeoJSON data could not be loaded",
+                    xref="paper", yref="paper",
+                    x=0.5, y=0.5, xanchor='center', yanchor='middle',
+                    showarrow=False, font=dict(size=16)
+                )
+            ]
+        )
+        return fig
+    
+    # Calculate depression rates by division
+    division_rates = geo_service.calculate_division_depression_rates(df)
+    
+    # Prepare data for choropleth map
+    division_names = []
+    depression_rates = []
+    
+    # Extract division names from GeoJSON and match with calculated rates
+    for feature in geojson_data.get('features', []):
+        division_name = feature['properties']['ADM1_EN']
+        division_names.append(division_name)
+        
+        # Get depression rate for this division, default to 0 if no data
+        rate = division_rates.get(division_name, 0.0)
+        depression_rates.append(rate)
+    
+    # Create DataFrame for choropleth
+    choropleth_df = pd.DataFrame({
+        'division': division_names,
+        'depression_rate': depression_rates
+    })
+    
+    # Create choropleth map using plotly express
+    try:
+        fig = px.choropleth_map(
+            choropleth_df,
+            geojson=geojson_data,
+            locations='division',
+            color='depression_rate',
+            featureidkey="properties.ADM1_EN",
+            color_continuous_scale='RdYlBu_r',  # Red for high depression, Blue for low
+            range_color=(0, max(depression_rates) if depression_rates else 100),
+            labels={'depression_rate': 'Depression Rate (%)', 'division': 'Division'},
+            title='Depression Rates by Division in Bangladesh'
+        )
+        
+        # Update layout for better appearance
+        fig.update_layout(
+            title_x=0.5,
+            title_font_size=20,
+            title_font_color='#2c3e50',
+            font=dict(size=12),
+            height=600,
+            margin=dict(l=0, r=0, t=50, b=0)
+        )
+        
+        # Update color bar
+        fig.update_coloraxes(
+            colorbar_title_text="Depression Rate (%)",
+            colorbar_title_side="right",
+            colorbar_thickness=20
+        )
+        
+        logger.info(f"Created choropleth map with {len(division_names)} divisions")
+        return fig
+        
+    except Exception as e:
+        logger.error(f"Error creating choropleth map: {e}")
+        # Return simple fallback figure that doesn't use problematic Plotly features
+        try:
+            # Create a simple scatter plot as fallback
+            fig = go.Figure()
+            
+            # Add scatter trace for each division
+            for i, (division, rate) in enumerate(zip(division_names, depression_rates)):
+                fig.add_trace(go.Scatter(
+                    x=[i],
+                    y=[rate],
+                    mode='markers+text',
+                    marker=dict(size=20, color=rate, colorscale='RdYlBu_r', cmax=100, cmin=0),
+                    text=[division],
+                    textposition='middle center',
+                    name=division,
+                    showlegend=False
+                ))
+            
+            fig.update_layout(
+                title="Depression Rates by Division (Fallback View)",
+                xaxis=dict(title="Division Index", showticklabels=False),
+                yaxis=dict(title="Depression Rate (%)"),
+                height=400
+            )
+            
+            logger.info("Created fallback scatter plot for choropleth map")
+            return fig
+            
+        except Exception as fallback_error:
+            logger.error(f"Error creating fallback figure: {fallback_error}")
+            # Ultimate fallback - create a minimal figure manually
+            try:
+                # Create the most basic figure possible
+                fig = go.Figure(data=[], layout={})
+                logger.info("Created minimal empty figure as ultimate fallback")
+                return fig
+            except Exception as ultimate_error:
+                # If even that fails, return None to indicate failure
+                logger.error(f"Could not create any Plotly figure: {ultimate_error}")
+                return None
