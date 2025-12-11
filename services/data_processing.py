@@ -5,13 +5,346 @@ project_root = Path(__file__).parent.parent
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from typing import Iterable
+from typing import Iterable, List
 import pandas as pd
+import numpy as np
 from utils.logger import get_logger
 from utils.config import RAW_DATA_PATH
 
 
 logger = get_logger(__name__)
+
+def handle_missing_target_variable(df: pd.DataFrame, target_column: str = 'depression') -> pd.DataFrame:
+    """
+    Drop rows where the target variable (depression) is missing.
+    Never impute this column as it's our target variable.
+    
+    Args:
+        df: Input DataFrame
+        target_column: Name of the target column (default: 'depression')
+        
+    Returns:
+        DataFrame with rows containing missing target values dropped
+    """
+    out = df.copy()
+    
+    if target_column not in out.columns:
+        logger.warning(f"Target column '{target_column}' not found in DataFrame")
+        return out
+    
+    initial_rows = len(out)
+    out = out.dropna(subset=[target_column])
+    dropped_rows = initial_rows - len(out)
+    
+    if dropped_rows > 0:
+        logger.info(f"Dropped {dropped_rows} rows with missing {target_column} values")
+    
+    return out
+
+
+def impute_yes_no_columns(df: pd.DataFrame, yes_no_columns: List[str]) -> pd.DataFrame:
+    """
+    Impute missing values in Yes/No columns with the mode (most frequent value).
+    For ties, prefer 'Yes' over 'No' as it's often the positive response.
+    
+    Args:
+        df: Input DataFrame
+        yes_no_columns: List of column names that contain Yes/No values
+        
+    Returns:
+        DataFrame with Yes/No columns imputed with mode
+    """
+    out = df.copy()
+    
+    for col in yes_no_columns:
+        if col not in out.columns:
+            logger.debug(f"Column '{col}' not found in DataFrame, skipping")
+            continue
+            
+        missing_count = out[col].isna().sum()
+        if missing_count == 0:
+            continue
+            
+        # Calculate value counts
+        value_counts = out[col].value_counts()
+        if len(value_counts) > 0:
+            # Check if there's a tie between Yes and No
+            max_count = value_counts.max()
+            tied_values = value_counts[value_counts == max_count].index.tolist()
+            
+            # For ties in Yes/No columns, prefer 'Yes'
+            if 'Yes' in tied_values:
+                mode_value = 'Yes'
+            else:
+                mode_value = value_counts.index[0]  # Most frequent value
+                
+            out[col] = out[col].fillna(mode_value)
+            logger.info(f"Imputed {missing_count} missing values in '{col}' with mode: '{mode_value}'")
+        else:
+            logger.warning(f"Could not determine mode for column '{col}', no imputation performed")
+    
+    return out
+
+
+def fill_low_cardinality_categorical(df: pd.DataFrame, categorical_columns: List[str]) -> pd.DataFrame:
+    """
+    Fill missing values in low-cardinality categorical columns with 'Unknown'.
+    
+    Args:
+        df: Input DataFrame
+        categorical_columns: List of categorical column names
+        
+    Returns:
+        DataFrame with low-cardinality categoricals filled with 'Unknown'
+    """
+    out = df.copy()
+    
+    for col in categorical_columns:
+        if col not in out.columns:
+            logger.debug(f"Column '{col}' not found in DataFrame, skipping")
+            continue
+            
+        missing_count = out[col].isna().sum()
+        if missing_count == 0:
+            continue
+            
+        # Fill with 'Unknown'
+        out[col] = out[col].fillna('Unknown')
+        logger.info(f"Filled {missing_count} missing values in '{col}' with 'Unknown'")
+    
+    return out
+
+
+def fill_high_cardinality_categorical(df: pd.DataFrame, categorical_columns: List[str]) -> pd.DataFrame:
+    """
+    Fill missing values in high-cardinality categorical columns with 'Unknown'.
+    For high-cardinality columns, we avoid mode imputation to prevent distribution distortion.
+    
+    Args:
+        df: Input DataFrame  
+        categorical_columns: List of high-cardinality categorical column names
+        
+    Returns:
+        DataFrame with high-cardinality categoricals filled with 'Unknown'
+    """
+    out = df.copy()
+    
+    for col in categorical_columns:
+        if col not in out.columns:
+            logger.debug(f"Column '{col}' not found in DataFrame, skipping")
+            continue
+            
+        missing_count = out[col].isna().sum()
+        if missing_count == 0:
+            continue
+            
+        # Fill with 'Unknown' instead of mode to avoid distribution distortion
+        out[col] = out[col].fillna('Unknown')
+        unique_count = out[col].nunique()
+        logger.info(f"Filled {missing_count} missing values in high-cardinality column '{col}' with 'Unknown' ({unique_count} unique values)")
+    
+    return out
+
+
+def impute_numeric_columns(df: pd.DataFrame, numeric_columns: List[str]) -> pd.DataFrame:
+    """
+    Impute missing values in numeric columns with the median.
+    
+    Args:
+        df: Input DataFrame
+        numeric_columns: List of numeric column names
+        
+    Returns:
+        DataFrame with numeric columns imputed with median
+    """
+    out = df.copy()
+    
+    for col in numeric_columns:
+        if col not in out.columns:
+            logger.debug(f"Column '{col}' not found in DataFrame, skipping")
+            continue
+            
+        missing_count = out[col].isna().sum()
+        if missing_count == 0:
+            continue
+            
+        # Calculate median and impute
+        median_value = out[col].median()
+        if not pd.isna(median_value):
+            out[col] = out[col].fillna(median_value)
+            logger.info(f"Imputed {missing_count} missing values in '{col}' with median: {median_value}")
+        else:
+            logger.warning(f"Could not calculate median for column '{col}', no imputation performed")
+    
+    return out
+
+
+def handle_cgpa_categorical(df: pd.DataFrame, column: str = 'cgpa') -> pd.DataFrame:
+    """
+    Handle CGPA as an ordered categorical variable, not numeric.
+    CGPA values are intervals like '3.00-3.49' and should be treated as categorical.
+    
+    Args:
+        df: Input DataFrame
+        column: CGPA column name (default: 'cgpa')
+        
+    Returns:
+        DataFrame with CGPA handled as categorical
+    """
+    out = df.copy()
+    
+    if column not in out.columns:
+        logger.debug(f"Column '{column}' not found in DataFrame, returning unchanged")
+        return out
+        
+    missing_count = out[column].isna().sum()
+    
+    if missing_count > 0:
+        # For CGPA intervals, we can either use mode or 'Unknown'
+        # Using mode might make sense for academic data
+        mode_values = out[column].mode()
+        if len(mode_values) > 0:
+            mode_value = mode_values.iloc[0]
+            out[column] = out[column].fillna(mode_value)
+            logger.info(f"Filled {missing_count} missing CGPA values with mode: '{mode_value}'")
+        else:
+            out[column] = out[column].fillna('Unknown')
+            logger.info(f"Filled {missing_count} missing CGPA values with 'Unknown'")
+    
+    # Ensure it remains as object/categorical type
+    out[column] = out[column].astype('object')
+    logger.debug(f"CGPA column '{column}' treated as categorical (dtype: object)")
+    
+    return out
+
+
+def handle_timestamp_and_drop_invalid(df: pd.DataFrame, column: str = 'timestamp') -> pd.DataFrame:
+    """
+    Convert timestamp column to datetime and drop rows with invalid timestamps.
+    
+    Args:
+        df: Input DataFrame
+        column: Timestamp column name (default: 'timestamp')
+        
+    Returns:
+        DataFrame with valid timestamps converted and invalid rows dropped
+    """
+    out = df.copy()
+    
+    if column not in out.columns:
+        logger.debug(f"Column '{column}' not found in DataFrame, returning unchanged")
+        return out
+        
+    initial_rows = len(out)
+    
+    # Convert to datetime - try standard ISO format first, then infer others
+    out[column] = pd.to_datetime(out[column], errors='coerce')
+    
+    # Drop rows with invalid timestamps (NaT)
+    out = out.dropna(subset=[column])
+    
+    dropped_rows = initial_rows - len(out)
+    if dropped_rows > 0:
+        logger.info(f"Dropped {dropped_rows} rows with invalid timestamps")
+    
+    logger.info(f"Successfully converted '{column}' to datetime format")
+    return out
+
+
+def handle_year_of_study_drop_missing(df: pd.DataFrame, column: str = 'year_of_study') -> pd.DataFrame:
+    """
+    Drop rows where year_of_study is missing, as it's critical for academic analysis.
+    
+    Args:
+        df: Input DataFrame
+        column: Year of study column name (default: 'year_of_study')
+        
+    Returns:
+        DataFrame with rows containing missing year_of_study dropped
+    """
+    out = df.copy()
+    
+    if column not in out.columns:
+        logger.debug(f"Column '{column}' not found in DataFrame, returning unchanged")
+        return out
+        
+    initial_rows = len(out)
+    out = out.dropna(subset=[column])
+    dropped_rows = initial_rows - len(out)
+    
+    if dropped_rows > 0:
+        logger.info(f"Dropped {dropped_rows} rows with missing {column} values (critical for analysis)")
+    
+    return out
+
+
+def comprehensive_missing_value_pipeline(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Complete missing value handling pipeline following best practices.
+    
+    Processing order:
+    1. Handle target variable (depression) - drop missing rows
+    2. Handle critical variables (year_of_study) - drop missing rows  
+    3. Handle timestamps - convert and drop invalid
+    4. Impute Yes/No columns with mode
+    5. Fill low-cardinality categoricals with 'Unknown'
+    6. Fill high-cardinality categoricals with 'Unknown'
+    7. Handle CGPA as categorical
+    8. Impute numeric columns with median
+    
+    Args:
+        df: Input DataFrame
+        
+    Returns:
+        Fully cleaned DataFrame
+    """
+    logger.info("Starting comprehensive missing value handling pipeline")
+    out = df.copy()
+    initial_rows = len(out)
+    
+    # 1. Handle target variable - never impute, always drop
+    out = handle_missing_target_variable(out, 'depression')
+    
+    # 2. Handle critical academic variable - drop missing
+    out = handle_year_of_study_drop_missing(out, 'year_of_study')
+    
+    # 3. Handle timestamps - convert and drop invalid
+    if 'timestamp' in out.columns:
+        out = handle_timestamp_and_drop_invalid(out, 'timestamp')
+    
+    # 4. Impute Yes/No columns with mode
+    yes_no_columns = ['anxiety', 'panic_attack', 'family_history_mental_illness', 'sought_treatment']
+    existing_yes_no = [col for col in yes_no_columns if col in out.columns]
+    if existing_yes_no:
+        out = impute_yes_no_columns(out, existing_yes_no)
+    
+    # 5. Fill low-cardinality categoricals with 'Unknown'
+    low_cardinality_columns = ['gender', 'division', 'marital_status', 'living_situation']
+    existing_low_cardinality = [col for col in low_cardinality_columns if col in out.columns]
+    if existing_low_cardinality:
+        out = fill_low_cardinality_categorical(out, existing_low_cardinality)
+    
+    # 6. Fill high-cardinality categoricals with 'Unknown'
+    high_cardinality_columns = ['course', 'university']
+    existing_high_cardinality = [col for col in high_cardinality_columns if col in out.columns]
+    if existing_high_cardinality:
+        out = fill_high_cardinality_categorical(out, existing_high_cardinality)
+    
+    # 7. Handle CGPA as categorical
+    if 'cgpa' in out.columns:
+        out = handle_cgpa_categorical(out, 'cgpa')
+    
+    # 8. Impute numeric columns with median  
+    numeric_columns = ['age']
+    existing_numeric = [col for col in numeric_columns if col in out.columns]
+    if existing_numeric:
+        out = impute_numeric_columns(out, existing_numeric)
+    
+    final_rows = len(out)
+    logger.info(f"Missing value pipeline complete: {initial_rows} -> {final_rows} rows ({initial_rows - final_rows} dropped)")
+    
+    return out
+
 
 
 def load_data(filepath: str = None) -> pd.DataFrame:
@@ -232,46 +565,6 @@ def normalize_year_of_study(df: pd.DataFrame, column: str = "year_of_study") -> 
 	return out
 
 
-def fill_missing_values(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    - Drop rows where 'depression' (or 'Do you have Depression?') is missing
-    - For all other columns, fill missing values with 'Unknown'
-    """
-    out = df.copy()
-
-    # Handle both original and standardized column names
-    depression_col = None
-    if "depression" in out.columns:
-        depression_col = "depression"
-    elif "Do you have Depression?" in out.columns:
-        depression_col = "Do you have Depression?"
-    
-    # 1. Drop rows where depression is missing
-    if depression_col:
-        before = len(out)
-        out = out.dropna(subset=[depression_col])
-        dropped = before - len(out)
-        if dropped > 0:
-            logger.info(f"Dropped {dropped} rows with missing {depression_col} value.")
-
-    # 2. Fill missing values for non-numeric columns only
-    # Numeric columns (age, year, month) should keep NaN values
-    numeric_cols = {'age', 'year', 'month'}
-    
-    for col in out.columns:
-        if depression_col and col == depression_col:
-            continue  # already handled
-        if col in numeric_cols:
-            continue  # skip numeric columns, they'll be handled separately
-        
-        missing_before = out[col].isna().sum()
-        if missing_before > 0:
-            out[col] = out[col].fillna("Unknown")
-            logger.debug(f"Filled {missing_before} missing values in column: {col}")
-
-    return out
-
-
 def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
 	"""Remove duplicate rows from the DataFrame.
 	
@@ -379,7 +672,7 @@ def clean_data(filepath: str = None) -> pd.DataFrame:
 	4. Convert timestamps to datetime
 	5. Normalize yes/no columns
 	6. Add temporal columns
-	7. Fill missing values
+	7. Fill missing values 
 	8. Convert numeric columns to proper types
 	9. Normalize year of study values
 	
@@ -419,11 +712,12 @@ def clean_data(filepath: str = None) -> pd.DataFrame:
 	except Exception as e:
 		logger.warning(f"Adding temporal columns failed: {e}; continuing")
 	
-	# Step 7: Fill missing values (will now look for 'depression' column)
+	# Step 7: Fill missing values using TDD-validated comprehensive pipeline
 	try:
-		df = fill_missing_values(df)
+		df = comprehensive_missing_value_pipeline(df)
+		logger.debug(f"Step 7: Applied comprehensive missing value handling pipeline")
 	except Exception as e:
-		logger.warning(f"Filling missing values failed: {e}; continuing")
+		logger.warning(f"Comprehensive missing value handling failed: {e}; continuing")
 	
 	# Step 8: Convert numeric columns to proper types
 	try:

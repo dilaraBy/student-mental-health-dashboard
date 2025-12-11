@@ -10,6 +10,7 @@ import sqlite3
 import pandas as pd
 from typing import Optional
 from utils.logger import get_logger
+from services.data_processing import comprehensive_missing_value_pipeline
 
 logger = get_logger(__name__)
 
@@ -109,30 +110,108 @@ class StudentMentalHealthRepository:
             conn.close()
 
 
-    def get_all_data(self) -> pd.DataFrame:
+    def get_all_data_raw(self) -> pd.DataFrame:
         """
-        Retrieve all data from the survey_responses table as a DataFrame.
+        Retrieve raw data from the survey_responses table as a DataFrame.
+        Use this only when you specifically need unprocessed data.
+        
+        Returns:
+            Raw DataFrame directly from database without any processing.
         """
         conn = self.get_connection()
         try:
             df = pd.read_sql_query("SELECT * FROM survey_responses", conn)
-            logger.info(f"Retrieved {len(df)} rows from survey_responses.")
+            logger.info(f"Retrieved {len(df)} raw rows from survey_responses.")
             return df
         finally:
             conn.close()
-
-    def get_row_count(self) -> int:
+    
+    def get_all_data(self) -> pd.DataFrame:
         """
-        Get the total number of rows in the survey_responses table.
+        Retrieve cleaned, analysis-ready data from the survey_responses table.
+        
+        This method follows Clean Architecture principles by providing business-ready data
+        to the application layer. The data goes through comprehensive cleaning including:
+        - Missing value handling with TDD-validated pipeline
+        - Data type standardization
+        - Categorical variable normalization
+        - Timestamp validation
         
         Returns:
-            Number of rows in the table.
+            Cleaned DataFrame ready for analysis and visualization.
+        """
+        # Get raw data first
+        raw_df = self.get_all_data_raw()
+        
+        if raw_df.empty:
+            logger.warning("No raw data available for cleaning")
+            return raw_df
+        
+        try:
+            # Apply comprehensive data cleaning pipeline
+            cleaned_df = comprehensive_missing_value_pipeline(raw_df)
+            
+            # Log cleaning results
+            original_rows = len(raw_df)
+            cleaned_rows = len(cleaned_df)
+            logger.info(f"Data cleaning complete: {original_rows} -> {cleaned_rows} rows (quality improved)")
+            
+            return cleaned_df
+            
+        except Exception as e:
+            logger.error(f"Data cleaning failed: {e}. Returning raw data as fallback.")
+            logger.warning("Consider investigating data quality issues in the cleaning pipeline")
+            return raw_df
+
+    def get_data_quality_stats(self) -> dict:
+        """
+        Get data quality statistics comparing raw vs cleaned data.
+        
+        Returns:
+            Dictionary with raw_rows, cleaned_rows, dropped_rows, and data_quality_ratio.
+        """
+        raw_df = self.get_all_data_raw()
+        cleaned_df = self.get_all_data()
+        
+        raw_rows = len(raw_df)
+        cleaned_rows = len(cleaned_df)
+        dropped_rows = raw_rows - cleaned_rows
+        quality_ratio = (cleaned_rows / raw_rows * 100) if raw_rows > 0 else 0
+        
+        stats = {
+            'raw_rows': raw_rows,
+            'cleaned_rows': cleaned_rows, 
+            'dropped_rows': dropped_rows,
+            'data_quality_ratio': round(quality_ratio, 2)
+        }
+        
+        logger.debug(f"Data quality stats: {stats}")
+        return stats
+    
+    def get_row_count(self) -> int:
+        """
+        Get the total number of cleaned rows (analysis-ready data).
+        
+        Returns:
+            Number of cleaned rows available for analysis.
+        """
+        cleaned_df = self.get_all_data()
+        count = len(cleaned_df)
+        logger.debug(f"Total cleaned rows available: {count}")
+        return count
+    
+    def get_raw_row_count(self) -> int:
+        """
+        Get the total number of raw rows in the survey_responses table.
+        
+        Returns:
+            Number of raw rows in the database table.
         """
         conn = self.get_connection()
         try:
             cursor = conn.execute("SELECT COUNT(*) FROM survey_responses")
             (count,) = cursor.fetchone()
-            logger.debug(f"Total rows in survey_responses: {count}")
+            logger.debug(f"Total raw rows in survey_responses: {count}")
             return count
         finally:
             conn.close()
@@ -487,20 +566,70 @@ class StudentMentalHealthRepository:
         finally:
             conn.close()
 
-    def get_all_data_with_ids(self) -> pd.DataFrame:
+    def get_all_data_with_ids_raw(self) -> pd.DataFrame:
         """
-        Get all survey data including rowid for CRUD operations.
+        Get raw survey data including rowid for CRUD operations.
+        Use this only when you need unprocessed data with IDs.
         
         Returns:
-            DataFrame with all survey data including rowid column.
+            Raw DataFrame with all survey data including rowid column.
         """
         conn = self.get_connection()
         try:
             df = pd.read_sql_query("SELECT rowid, * FROM survey_responses", conn)
-            logger.info(f"Retrieved {len(df)} rows with IDs from survey_responses.")
+            logger.info(f"Retrieved {len(df)} raw rows with IDs from survey_responses.")
             return df
         except Exception as e:
-            logger.error(f"Error retrieving data with IDs: {e}")
+            logger.error(f"Error retrieving raw data with IDs: {e}")
             return pd.DataFrame()
         finally:
             conn.close()
+    
+    def get_all_data_with_ids(self) -> pd.DataFrame:
+        """
+        Get cleaned survey data including rowid for CRUD operations and filtering.
+        
+        This method provides cleaned, analysis-ready data while preserving rowid
+        for database operations. The cleaning pipeline is applied but rowid mapping
+        is maintained for UPDATE/DELETE operations.
+        
+        Returns:
+            Cleaned DataFrame with rowid column for CRUD operations.
+        """
+        try:
+            # Get raw data with IDs
+            raw_df_with_ids = self.get_all_data_with_ids_raw()
+            
+            if raw_df_with_ids.empty:
+                logger.warning("No raw data with IDs available")
+                return raw_df_with_ids
+            
+            # Extract rowid column before cleaning
+            rowids = raw_df_with_ids['rowid'].copy()
+            
+            # Apply cleaning to the data columns (without rowid)
+            data_columns = raw_df_with_ids.drop('rowid', axis=1)
+            cleaned_data = comprehensive_missing_value_pipeline(data_columns)
+            
+            if cleaned_data.empty:
+                logger.warning("All data was filtered out during cleaning - returning empty DataFrame")
+                return pd.DataFrame()
+            
+            # Map back the rowids to cleaned data
+            # Note: Some rows may have been dropped during cleaning
+            original_indices = data_columns.index
+            cleaned_indices = cleaned_data.index
+            
+            # Filter rowids to match cleaned data indices
+            matching_rowids = rowids.loc[cleaned_indices]
+            
+            # Combine cleaned data with corresponding rowids
+            result_df = cleaned_data.copy()
+            result_df.insert(0, 'rowid', matching_rowids.values)
+            
+            logger.info(f"Retrieved {len(result_df)} cleaned rows with IDs (CRUD-ready)")
+            return result_df
+            
+        except Exception as e:
+            logger.error(f"Error retrieving cleaned data with IDs: {e}. Falling back to raw data.")
+            return self.get_all_data_with_ids_raw()

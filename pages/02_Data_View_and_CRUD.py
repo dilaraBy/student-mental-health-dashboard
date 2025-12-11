@@ -25,6 +25,72 @@ repository, data_service = get_services()
 st.title("📋 Data View & CRUD")
 st.markdown("*Manage and explore the student mental health dataset with advanced filtering and CRUD operations.*")
 
+# ========================================
+# DATA QUALITY MONITORING SECTION  
+# ========================================
+st.markdown("---")
+st.subheader("🔍 Data Quality Overview")
+
+try:
+    # Get data quality statistics
+    quality_stats = repository.get_data_quality_stats()
+    
+    # Create metrics columns
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric(
+            "📊 Raw Records", 
+            f"{quality_stats['raw_rows']:,}",
+            help="Total records in database"
+        )
+    
+    with col2:
+        st.metric(
+            "✅ Clean Records", 
+            f"{quality_stats['cleaned_rows']:,}",
+            help="Records available after data cleaning pipeline"
+        )
+    
+    with col3:
+        st.metric(
+            "🗑️ Dropped Records", 
+            f"{quality_stats['dropped_rows']:,}",
+            help="Records removed due to data quality issues"
+        )
+    
+    with col4:
+        quality_ratio = quality_stats['data_quality_ratio']
+        delta_color = "normal" if quality_ratio >= 90 else "inverse"
+        st.metric(
+            "🎯 Data Quality", 
+            f"{quality_ratio}%",
+            help="Percentage of records passing data quality validation",
+            delta=f"{'✅' if quality_ratio >= 90 else '⚠️'} {'Excellent' if quality_ratio >= 95 else 'Good' if quality_ratio >= 90 else 'Needs Attention'}"
+        )
+    
+    # Data quality explanation
+    with st.expander("ℹ️ Data Quality Details"):
+        st.markdown("""
+        **Data Cleaning Pipeline includes:**
+        - ✅ **Target Variable Validation**: Drops rows with missing depression values
+        - ✅ **Timestamp Validation**: Converts timestamps and removes invalid entries  
+        - ✅ **Missing Value Imputation**: Smart handling by data type (mode, median, 'Unknown')
+        - ✅ **Categorical Normalization**: Proper handling of Yes/No and categorical variables
+        - ✅ **Academic Data Validation**: Ensures critical fields like year_of_study are present
+        
+        **Quality Ratio Interpretation:**
+        - 🟢 **95%+ (Excellent)**: High-quality dataset ready for analysis
+        - 🟡 **90-95% (Good)**: Minor data quality issues, generally reliable  
+        - 🔴 **<90% (Needs Attention)**: Significant data quality concerns requiring investigation
+        """)
+    
+except Exception as e:
+    st.error(f"Error loading data quality stats: {e}")
+    logger.error(f"Data quality stats error: {e}")
+
+st.markdown("---")
+
 # Initialize session state for form management
 if 'show_create_form' not in st.session_state:
     st.session_state.show_create_form = False
