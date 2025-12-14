@@ -13,7 +13,7 @@ from services.overview_analysis import (
     compute_kpis,
     plot_overall_depression, 
     plot_depression_by_gender_pie,
-    plot_depression_by_division_bar,
+    plot_depression_by_course_bar,
     plot_risk_profile_radar
 )
 from services.visualization import plot_depression_choropleth
@@ -71,7 +71,8 @@ try:
     # Summary Visualizations Section
     st.subheader("📈 Summary Visualizations")
     
-    col1, col2 = st.columns(2)
+    # Top row - 3 columns with main charts side by side
+    col1, col2, col3 = st.columns([1, 1, 1])
     
     with col1:
         st.write("**Overall Depression Prevalence**")
@@ -83,51 +84,29 @@ try:
         fig2 = plot_depression_by_gender_pie(df)
         st.pyplot(fig2)
     
-    # Full width charts
-    st.write("**Depression by Academic Division**")
-    fig3 = plot_depression_by_division_bar(df)
-    st.pyplot(fig3)
+    with col3:
+        st.write("**Depression by Course**")
+        fig3 = plot_depression_by_course_bar(df)
+        st.pyplot(fig3)
     
-    st.write("**Geographic Distribution of Depression Rates**")
-    try:
-        choropleth_fig = plot_depression_choropleth(df)
-        if choropleth_fig is not None:
-            st.plotly_chart(choropleth_fig, width="stretch")
-        else:
-            st.info("Interactive choropleth map could not be created. This may be due to missing geographic data or technical limitations.")
-    except Exception as e:
-        st.warning(f"Could not create geographic map: {e}")
-        st.info("Geographic visualization requires valid Bangladesh division data.")
+    # Bottom row - 2 columns for geographic and risk profile
+    col4, col5 = st.columns([1.2, 0.8])
     
-    st.write("**Mental Health Risk Profile**")
-    fig4 = plot_risk_profile_radar(df)
-    st.pyplot(fig4)
-
-    st.markdown("---")
-
-    # Quick Insights Section
-    st.subheader("💡 Key Insights")
+    with col4:
+        st.write("**Geographic Distribution**")
+        try:
+            choropleth_fig = plot_depression_choropleth(df)
+            if choropleth_fig is not None:
+                st.plotly_chart(choropleth_fig, width='stretch')
+            else:
+                st.info("Interactive choropleth map could not be created.")
+        except Exception as e:
+            st.warning(f"Could not create geographic map: {e}")
     
-    # Generate insights based on KPIs
-    insights = []
-    
-    if kpis['total_students'] > 0:
-        insights.append(f"📊 **{kpis['total_students']} students** participated in this mental health survey")
-    
-    if kpis['depression_rate'] > 0:
-        if kpis['depression_rate'] > 30:
-            insights.append(f"🚨 **High depression rate**: {kpis['depression_rate']:.1f}% of students report depression symptoms")
-        else:
-            insights.append(f"📈 **Depression rate**: {kpis['depression_rate']:.1f}% of students report depression symptoms")
-    
-    if 'help_seeking_rate' in kpis and kpis['help_seeking_rate'] < 50:
-        insights.append(f"⚠️ **Low help-seeking behavior**: Only {kpis['help_seeking_rate']:.1f}% of students have sought mental health treatment")
-    elif 'help_seeking_rate' in kpis:
-        insights.append(f"✅ **Positive help-seeking**: {kpis['help_seeking_rate']:.1f}% of students have sought mental health treatment")
-    
-    # Display insights
-    for insight in insights:
-        st.write(insight)
+    with col5:
+        st.write("**Risk Profile**")
+        fig4 = plot_risk_profile_radar(df)
+        st.pyplot(fig4)
 
     st.markdown("---")
 
