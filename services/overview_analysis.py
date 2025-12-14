@@ -181,7 +181,7 @@ def plot_overall_depression(df: pd.DataFrame) -> Figure:
     Returns:
         matplotlib.figure.Figure: The generated plot figure
     """
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(4, 3))
     
     # Check if required column exists
     if 'depression' not in df.columns:
@@ -209,7 +209,7 @@ def plot_overall_depression(df: pd.DataFrame) -> Figure:
         return fig
     
     # Create bar chart
-    colors = ['#66b3ff', '#ff9999']
+    colors = ['#4a90e2', '#7bb3f0']  # Blue tones
     bars = ax.bar(depression_counts.index, depression_counts.values, color=colors)
     
     # Add percentage labels on bars
@@ -238,7 +238,7 @@ def plot_depression_by_gender_pie(df: pd.DataFrame) -> Figure:
     Returns:
         matplotlib.figure.Figure: The generated plot figure
     """
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(4, 4))
     
     # Check if required columns exist
     required_cols = ['depression', 'gender']
@@ -271,7 +271,9 @@ def plot_depression_by_gender_pie(df: pd.DataFrame) -> Figure:
         return fig
     
     # Create pie chart
-    colors = plt.cm.Set3(range(len(gender_pct)))
+    # Blue-toned color palette
+    blue_colors = ['#1e3a8a', '#3b82f6', '#60a5fa', '#93c5fd', '#bfdbfe', '#dbeafe']
+    colors = blue_colors[:len(gender_pct)]
     labels = [f'{gender}\n({pct:.1f}%)' for gender, pct in gender_pct.items()]
     
     wedges, texts = ax.pie(gender_pct.values, labels=labels, colors=colors, startangle=90)
@@ -281,6 +283,73 @@ def plot_depression_by_gender_pie(df: pd.DataFrame) -> Figure:
     plt.tight_layout()
     return fig
 
+
+def plot_depression_by_course_bar(df: pd.DataFrame) -> Figure:
+    """
+    Plot depression prevalence by course as a horizontal bar chart.
+    
+    Args:
+        df: DataFrame with 'depression' and 'course' columns
+        
+    Returns:
+        matplotlib.figure.Figure: The generated plot figure
+    """
+    fig, ax = plt.subplots(figsize=(4, 5))  # Compact for 3-column layout
+    
+    # Check if required columns exist
+    required_cols = ['depression', 'course']
+    missing_cols = [col for col in required_cols if col not in df.columns]
+    
+    if missing_cols:
+        logger.warning(f"Columns {missing_cols} not found in DataFrame for plot_depression_by_course_bar")
+        ax.text(0.5, 0.5, f'Missing columns: {", ".join(missing_cols)}', 
+                ha='center', va='center', transform=ax.transAxes, fontsize=12)
+        ax.set_title('Depression by Course - Missing Data')
+        return fig
+    
+    # Handle empty DataFrame
+    if df.empty:
+        logger.warning("Empty DataFrame provided to plot_depression_by_course_bar")
+        ax.text(0.5, 0.5, 'No data available', 
+                ha='center', va='center', transform=ax.transAxes, fontsize=12)
+        ax.set_title('Depression by Course - No Data')
+        return fig
+    
+    # Calculate depression percentage by course
+    course_depression = df[df['depression'] == 'Yes'].groupby('course').size()
+    course_total = df.groupby('course').size()
+    course_pct = (course_depression / course_total * 100).fillna(0).sort_values(ascending=True)
+    
+    # Limit to top 8 courses for compact 3-column layout
+    if len(course_pct) > 8:
+        course_pct = course_pct.tail(8)
+    
+    if course_pct.empty:
+        ax.text(0.5, 0.5, 'No data to display', 
+                ha='center', va='center', transform=ax.transAxes, fontsize=12)
+        ax.set_title('Depression by Course - No Data')
+        return fig
+    
+    # Create horizontal bar chart
+    bars = ax.barh(course_pct.index, course_pct.values, color='#4a90e2')
+    
+    # Add percentage labels
+    for i, bar in enumerate(bars):
+        width = bar.get_width()
+        ax.text(width + 1, bar.get_y() + bar.get_height()/2,
+                f'{width:.1f}%', ha='left', va='center', fontsize=8)
+    
+    ax.set_title('Depression Rate by Course', fontsize=11, fontweight='bold')
+    ax.set_xlabel('Depression Rate (%)', fontsize=9)
+    ax.set_ylabel('Course', fontsize=9)
+    ax.set_xlim(0, max(100, course_pct.max() * 1.1))
+    
+    # Adjust y-axis labels for better readability in compact layout
+    ax.tick_params(axis='y', labelsize=8)
+    ax.tick_params(axis='x', labelsize=8)
+    
+    plt.tight_layout()
+    return fig
 
 def plot_depression_by_division_bar(df: pd.DataFrame) -> Figure:
     """
@@ -292,7 +361,7 @@ def plot_depression_by_division_bar(df: pd.DataFrame) -> Figure:
     Returns:
         matplotlib.figure.Figure: The generated plot figure
     """
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, ax = plt.subplots(figsize=(8, 5))
     
     # Check if required columns exist
     required_cols = ['depression', 'division']
@@ -325,7 +394,7 @@ def plot_depression_by_division_bar(df: pd.DataFrame) -> Figure:
         return fig
     
     # Create horizontal bar chart
-    bars = ax.barh(division_pct.index, division_pct.values, color='#ff7f7f')
+    bars = ax.barh(division_pct.index, division_pct.values, color='#4a90e2')
     
     # Add percentage labels
     for i, bar in enumerate(bars):
@@ -352,7 +421,7 @@ def plot_risk_profile_radar(df: pd.DataFrame) -> Figure:
     Returns:
         matplotlib.figure.Figure: The generated plot figure
     """
-    fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(projection='polar'))
+    fig, ax = plt.subplots(figsize=(5, 5), subplot_kw=dict(projection='polar'))
     
     # Handle empty DataFrame
     if df.empty:
@@ -416,8 +485,8 @@ def plot_risk_profile_radar(df: pd.DataFrame) -> Figure:
     angles += angles[:1]
     
     # Plot the radar chart
-    ax.plot(angles, values, 'o-', linewidth=2, color='#ff6b6b')
-    ax.fill(angles, values, alpha=0.25, color='#ff6b6b')
+    ax.plot(angles, values, 'o-', linewidth=2, color='#2563eb')
+    ax.fill(angles, values, alpha=0.25, color='#3b82f6')
     
     # Add category labels
     ax.set_xticks(angles[:-1])

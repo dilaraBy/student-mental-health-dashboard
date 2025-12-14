@@ -49,7 +49,7 @@ def plot_depression_prevalence(df: pd.DataFrame) -> matplotlib.figure.Figure:
         return fig
     
     # Create pie chart
-    colors = ['#ff9999', '#66b3ff']
+    colors = ['#7bb3f0', '#4a90e2']  # Blue tones
     pie_result = ax.pie(list(depression_counts.values), 
                        labels=list(depression_counts.index),
                        autopct='%1.1f%%',
@@ -102,7 +102,7 @@ def plot_depression_by_gender(df: pd.DataFrame) -> matplotlib.figure.Figure:
         return fig
     
     # Create grouped bar chart
-    grouped.plot(kind='bar', ax=ax, color=['#66b3ff', '#ff9999'], width=0.7)
+    grouped.plot(kind='bar', ax=ax, color=['#4a90e2', '#7bb3f0'], width=0.7)
     
     ax.set_title('Depression Prevalence by Gender', fontsize=14, fontweight='bold')
     ax.set_xlabel('Gender', fontsize=12)
@@ -155,7 +155,7 @@ def plot_depression_by_division(df: pd.DataFrame) -> matplotlib.figure.Figure:
         return fig
     
     # Create grouped bar chart
-    grouped.plot(kind='bar', ax=ax, color=['#66b3ff', '#ff9999'], width=0.7)
+    grouped.plot(kind='bar', ax=ax, color=['#4a90e2', '#7bb3f0'], width=0.7)
     
     ax.set_title('Depression Prevalence by Division', fontsize=14, fontweight='bold')
     ax.set_xlabel('Division', fontsize=12)
@@ -208,7 +208,7 @@ def plot_depression_by_year_of_study(df: pd.DataFrame) -> matplotlib.figure.Figu
         return fig
     
     # Create grouped bar chart
-    grouped.plot(kind='bar', ax=ax, color=['#66b3ff', '#ff9999'], width=0.7)
+    grouped.plot(kind='bar', ax=ax, color=['#4a90e2', '#7bb3f0'], width=0.7)
     
     ax.set_title('Depression Prevalence by Year of Study', fontsize=14, fontweight='bold')
     ax.set_xlabel('Year of Study', fontsize=12)
@@ -285,7 +285,7 @@ def plot_monthly_depression_trend(df: pd.DataFrame) -> matplotlib.figure.Figure:
     
     # Plot the trend
     x_vals = range(len(monthly_data))
-    ax.plot(x_vals, monthly_data['yes_percentage'], marker='o', linewidth=2, markersize=6, color='#ff6b6b')
+    ax.plot(x_vals, monthly_data['yes_percentage'], marker='o', linewidth=2, markersize=6, color='#2563eb')
     
     # Format x-axis labels
     ax.set_xticks(x_vals)
@@ -368,20 +368,24 @@ def plot_depression_choropleth(df: pd.DataFrame) -> Optional[go.Figure]:
             locations='division',
             color='depression_rate',
             featureidkey="properties.ADM1_EN",
-            color_continuous_scale='RdYlBu_r',  # Red for high depression, Blue for low
+            color_continuous_scale='Blues',  # Blue tones for consistency
             range_color=(0, max(depression_rates) if depression_rates else 100),
             labels={'depression_rate': 'Depression Rate (%)', 'division': 'Division'},
             title='Depression Rates by Division in Bangladesh'
         )
         
-        # Update layout for better appearance
+        # Update layout for better appearance and center on Bangladesh
         fig.update_layout(
             title_x=0.5,
             title_font_size=20,
             title_font_color='#2c3e50',
             font=dict(size=12),
             height=600,
-            margin=dict(l=0, r=0, t=50, b=0)
+            margin=dict(l=0, r=0, t=50, b=0),
+            map=dict(
+                center=dict(lat=23.685, lon=90.3563),  # Center of Bangladesh
+                zoom=6  # Appropriate zoom level for Bangladesh
+            )
         )
         
         # Update color bar
