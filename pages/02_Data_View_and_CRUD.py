@@ -112,6 +112,33 @@ def refresh_data():
     """Trigger data refresh."""
     st.session_state.refresh_data = True
 
+def reset_filters():
+    """Reset all filter states to default values."""
+    # Clear all filter session states
+    filter_keys = [
+        'gender_filter', 'depression_filter', 'division_filter', 'anxiety_filter',
+        'year_filter', 'stress_filter', 'start_date', 'end_date'
+    ]
+    for key in filter_keys:
+        if key in st.session_state:
+            del st.session_state[key]
+    st.session_state.refresh_data = True
+
+def get_dataset_date_range():
+    """Get the actual date range from the cleaned dataset."""
+    try:
+        df = repository.get_all_data()
+        if 'timestamp' in df.columns and len(df) > 0:
+            min_date = df['timestamp'].min().date()
+            max_date = df['timestamp'].max().date()
+            return min_date, max_date
+        else:
+            # Fallback to default range
+            return date.today() - timedelta(days=365*3), date.today()
+    except Exception as e:
+        logger.error(f"Error getting date range: {e}")
+        return date.today() - timedelta(days=365*3), date.today()
+
 
 # ========================================
 # 1. DATA FILTERING SECTION
@@ -169,20 +196,30 @@ with st.container():
             key="stress_filter"
         )
     
-    # Date range filter
+    # Date range filter with actual dataset range
     st.markdown("**Date Range Filter**")
+    
+    # Get actual date range from dataset
+    dataset_min_date, dataset_max_date = get_dataset_date_range()
+    
     col1, col2 = st.columns(2)
     with col1:
         start_date = st.date_input(
             "Start Date",
-            value=date.today() - timedelta(days=365),
-            key="start_date"
+            value=dataset_min_date,
+            min_value=dataset_min_date,
+            max_value=dataset_max_date,
+            key="start_date",
+            help=f"Dataset range: {dataset_min_date} to {dataset_max_date}"
         )
     with col2:
         end_date = st.date_input(
             "End Date", 
-            value=date.today(),
-            key="end_date"
+            value=dataset_max_date,
+            min_value=dataset_min_date,
+            max_value=dataset_max_date,
+            key="end_date",
+            help=f"Dataset range: {dataset_min_date} to {dataset_max_date}"
         )
     
     # Build filters dictionary
@@ -202,12 +239,18 @@ with st.container():
     if start_date and end_date:
         filters['date_range'] = (start_date, end_date)
     
-    # Apply filters button
-    col1, col2 = st.columns([1, 4])
+    # Apply and reset filters buttons
+    col1, col2, col3 = st.columns([1, 1, 3])
     with col1:
         if st.button("🔄 Apply Filters", key="apply_filters"):
             logger.info(f"User applied filters: {filters}")
             st.session_state.refresh_data = True
+    
+    with col2:
+        if st.button("🔄 Reset Filters", key="reset_filters", type="secondary"):
+            logger.info("User reset all filters")
+            reset_filters()
+            st.rerun()
 
 # ========================================
 # 2. DATA TABLE SECTION  
@@ -251,7 +294,7 @@ with st.spinner("Loading data..."):
                 filtered_df,
                 column_config=column_config,
                 hide_index=True,
-                use_container_width=True,
+                width='stretch',
                 height=400
             )
             
@@ -315,7 +358,7 @@ with st.expander("Upload CSV File", expanded=False):
             
             # Preview uploaded data
             st.markdown("**Preview of uploaded data:**")
-            st.dataframe(new_df.head(10), use_container_width=True)
+            st.dataframe(new_df.head(10), width='stretch')
             
             # Import options
             col1, col2 = st.columns(2)

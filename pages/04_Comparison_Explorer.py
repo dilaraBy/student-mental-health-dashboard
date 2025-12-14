@@ -198,18 +198,6 @@ def main():
             # Add explanation for multi-metric view
             st.info("📊 **Multi-Metric Analysis** shows all mental health metrics (Depression, Anxiety, Panic Attacks, Help-Seeking) simultaneously for the selected variable, making it easy to compare patterns across different conditions.")
         
-        # Generate and display insights
-        st.subheader("💡 Key Insights")
-        
-        with st.spinner("Generating insights..."):
-            insight = InsightGenerator.generate_insight(
-                data=comparison_data,
-                x_axis=selected_x,
-                y_metric=selected_y
-            )
-        
-        st.write(insight)
-        
         # Display data summary
         with st.expander("📊 Data Summary", expanded=False):
             st.write("**Comparison Data:**")

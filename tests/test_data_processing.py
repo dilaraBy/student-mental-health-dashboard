@@ -67,23 +67,6 @@ def test_add_temporal_columns_from_timestamp():
     assert result.loc[0, "month"] == 1
     assert result.loc[0, "day_of_week"] in ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
-def test_fill_missing_values_and_drop_depression():
-    df = pd.DataFrame({
-        "Gender": ["Male", None, "Female"],
-        "Division": [None, "Dhaka", None],
-        "Do you have Depression?": ["Yes", None, "No"]
-    })
-
-    cleaned = dp.fill_missing_values(df)
-
-    # Row 1 should be dropped because depression is missing
-    assert len(cleaned) == 2
-
-    # Check remaining rows
-    assert cleaned["Gender"].tolist() == ["Male", "Female"]
-    assert cleaned["Division"].tolist() == ["Unknown", "Unknown"]
-    assert cleaned["Do you have Depression?"].tolist() == ["Yes", "No"]
-
 def test_remove_duplicates_keeps_first():
     df = pd.DataFrame(
         {

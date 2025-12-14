@@ -3,19 +3,19 @@ import streamlit as st
 
 # Configure the Streamlit page
 st.set_page_config(
-    page_title="Student Mental Health Dashboard",
+    page_title="Welcome Page - Student Mental Health Dashboard",
     page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
 # Main page content
-st.title("🧠 Student Mental Health Dashboard")
+st.title("🧠 Welcome Page - Student Mental Health Dashboard")
 
 st.markdown("""
 ### Welcome to the Student Mental Health Analytics Platform
 
-This dashboard provides comprehensive insights into student mental health data through interactive visualizations and analysis tools.
+The aim of this project is to design and implement a Python-based data insights dashboard that allows public health and university stakeholders to explore, filter, and analyse student mental health data from a Bangladeshi university context. The system will provide interactive summaries, visualisations, and basic database operations, following software engineering best practices such as layered architecture, TDD, and FURPS-based requirements analysis.
 
 #### Available Pages:
 - **📊 Overview**: Key metrics and summary statistics
