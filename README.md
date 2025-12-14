@@ -215,29 +215,6 @@ The application uses configuration files in `utils/config.py` for:
 - **Performance Monitoring**: Database query optimization
 - **User Activity**: Interaction tracking for usage analytics
 
-## Contributing
-
-### Development Setup
-1. Fork the repository
-2. Create a feature branch
-3. Make changes following the existing code style
-4. Run tests to ensure functionality
-5. Submit a pull request with detailed description
-
-### Code Standards
-- Follow PEP 8 style guidelines
-- Add type hints for function parameters
-- Write comprehensive docstrings
-- Maintain test coverage above 80%
-- Use meaningful commit messages
-
-## License
-
-This project is developed for educational and research purposes as part of a university software engineering course focusing on data analytics and public health applications.
-
-## Support and Contact
-
-For technical support, feature requests, or academic collaboration inquiries, please create an issue in the repository or contact the development team.
 
 ---
 
