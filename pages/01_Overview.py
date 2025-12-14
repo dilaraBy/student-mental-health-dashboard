@@ -17,11 +17,16 @@ from services.overview_analysis import (
     plot_risk_profile_radar
 )
 from services.visualization import plot_depression_choropleth
+from utils.config import DB_PATH
+from utils.download_utils import create_download_section
 
 # Page configuration
 st.title("📊 Overview")
 
 st.write("Key metrics, summary statistics, and high-level insights about student mental health.")
+
+# Download section - will be populated after figures are created
+download_placeholder = st.empty()
 
 # Initialize data repository and load data
 try:
@@ -74,20 +79,26 @@ try:
     # Top row - 3 columns with main charts side by side
     col1, col2, col3 = st.columns([1, 1, 1])
     
+    # Collect figures for download
+    figures = []
+    
     with col1:
         st.write("**Overall Depression Prevalence**")
         fig1 = plot_overall_depression(df)
         st.pyplot(fig1)
+        figures.append(fig1)
     
     with col2:
         st.write("**Depression by Gender**")
         fig2 = plot_depression_by_gender_pie(df)
         st.pyplot(fig2)
+        figures.append(fig2)
     
     with col3:
         st.write("**Depression by Course**")
         fig3 = plot_depression_by_course_bar(df)
         st.pyplot(fig3)
+        figures.append(fig3)
     
     # Bottom row - 2 columns for geographic and risk profile
     col4, col5 = st.columns([1.2, 0.8])
@@ -107,6 +118,11 @@ try:
         st.write("**Risk Profile**")
         fig4 = plot_risk_profile_radar(df)
         st.pyplot(fig4)
+        figures.append(fig4)
+
+    # Populate download section at the top
+    with download_placeholder.container():
+        create_download_section("overview", figures)
 
     st.markdown("---")
 

@@ -25,11 +25,16 @@ from services.detailed_analysis import (
     plot_depression_by_condition_grouped_bar,
     plot_correlation_heatmap
 )
+from utils.config import DB_PATH
+from utils.download_utils import create_download_section
 
 # Page configuration  
 st.title("🔍 Detailed Analysis")
 
 st.write("Comprehensive statistical analysis exploring relationships between depression and various factors affecting student mental health.")
+
+# Download section - will be populated after figures are created
+download_placeholder = st.empty()
 
 # Initialize data repository and load data
 try:
@@ -47,6 +52,9 @@ except Exception as e:
     st.stop()
 
 # Analysis Layout
+# Collect figures for download
+figures = []
+
 st.markdown("---")
 
 # CGPA vs Depression Analysis
@@ -60,12 +68,9 @@ try:
     # Create and display boxplot
     fig = plot_cgpa_boxplot(cgpa_analysis)
     st.pyplot(fig)
+    figures.append(fig)
     
-    # Show statistical summary
-    with st.expander("📊 Statistical Summary"):
-        st.dataframe(cgpa_analysis.groupby('depression_label').agg({
-            'cgpa': ['count', 'mean', 'std', 'min', 'max']
-        }).round(3))
+
         
 except Exception as e:
     st.error(f"Error in CGPA analysis: {str(e)}")
@@ -83,10 +88,9 @@ try:
     # Create and display bar chart
     fig = plot_depression_by_year_bar(year_analysis)
     st.pyplot(fig)
+    figures.append(fig)
     
-    # Show detailed breakdown
-    with st.expander("📊 Year-wise Breakdown"):
-        st.dataframe(year_analysis)
+
         
 except Exception as e:
     st.error(f"Error in year analysis: {str(e)}")
@@ -104,10 +108,9 @@ try:
     # Create and display bar chart
     fig = plot_depression_by_financial_stress_bar(financial_analysis)
     st.pyplot(fig)
+    figures.append(fig)
     
-    # Show insights
-    with st.expander("💡 Key Insights"):
-        st.dataframe(financial_analysis)
+
         
 except Exception as e:
     st.error(f"Error in financial stress analysis: {str(e)}")
@@ -125,10 +128,9 @@ try:
     # Create and display bar chart
     fig = plot_depression_by_family_history_bar(family_analysis)
     st.pyplot(fig)
+    figures.append(fig)
     
-    # Show analysis results
-    with st.expander("📊 Family History Analysis"):
-        st.dataframe(family_analysis)
+
         
 except Exception as e:
     st.error(f"Error in family history analysis: {str(e)}")
@@ -151,17 +153,17 @@ try:
         st.write("**Anxiety & Depression**")
         fig_anxiety = plot_depression_by_condition_grouped_bar(anxiety_analysis, 'Anxiety')
         st.pyplot(fig_anxiety)
+        figures.append(fig_anxiety)
         
-        with st.expander("📊 Anxiety Analysis Data"):
-            st.dataframe(anxiety_analysis)
+
     
     with col2:
         st.write("**Panic Attacks & Depression**")
         fig_panic = plot_depression_by_condition_grouped_bar(panic_analysis, 'Panic Attack')
         st.pyplot(fig_panic)
+        figures.append(fig_panic)
         
-        with st.expander("📊 Panic Attack Analysis Data"):
-            st.dataframe(panic_analysis)
+
         
 except Exception as e:
     st.error(f"Error in conditions analysis: {str(e)}")
@@ -179,10 +181,9 @@ try:
     # Create and display heatmap
     fig = plot_correlation_heatmap(correlation_matrix)
     st.pyplot(fig)
+    figures.append(fig)
     
-    # Show correlation table
-    with st.expander("📊 Correlation Matrix Values"):
-        st.dataframe(correlation_matrix.round(3))
+
         
     # Key insights
     with st.expander("🔍 Key Correlations"):
@@ -196,6 +197,10 @@ except Exception as e:
     st.error(f"Error in correlation analysis: {str(e)}")
 
 st.markdown("---")
+
+# Populate download section at the top
+with download_placeholder.container():
+    create_download_section("detailed_analysis", figures)
 
 # Analysis Summary
 st.subheader("📝 Analysis Summary")
