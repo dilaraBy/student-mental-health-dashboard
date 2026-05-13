@@ -75,8 +75,8 @@ student_mental_health_dashboard/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd student_mental_health_dashboard
+   git clone https://github.com/dilaraBy/student-mental-health-dashboard.git
+   cd student-mental-health-dashboard
    ```
 
 2. **Install dependencies**
@@ -84,12 +84,18 @@ student_mental_health_dashboard/
    pip install -r requirements.txt
    ```
 
-3. **Run the application**
+3. **Bootstrap the data and database**
+   Downloads the Bangladesh GeoJSON (~14 MB) and initialises the SQLite DB from the bundled CSV.
+   ```bash
+   python -m scripts.setup_data
+   ```
+
+4. **Run the application**
    ```bash
    streamlit run app.py
    ```
 
-4. **Access the dashboard**
+5. **Access the dashboard**
    - Open your web browser to `http://localhost:8501`
    - Use the sidebar navigation to explore different pages
 

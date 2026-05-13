@@ -1,3 +1,4 @@
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -18,13 +19,32 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Environments
 .env
 .venv
 env/
 venv/
 ENV/
+
+# IDE
 .idea/
 .vscode/
 *.swp
 *.swo
 .DS_Store
+
+# Project artefacts — do NOT commit
+*.db
+*.sqlite
+*.sqlite3
+logs/
+*.log
+
+# Large reference data fetched at setup time
+data/raw/bangladesh_geojson_adm1_8_divisions_bibhags.json
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
