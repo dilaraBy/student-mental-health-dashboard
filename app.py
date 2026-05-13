@@ -1,6 +1,22 @@
 # Student Mental Health Dashboard - Main App
 import streamlit as st
 
+from utils.config import DB_PATH, GEOJSON_PATH
+
+
+@st.cache_resource
+def _bootstrap_data() -> None:
+    """First-run bootstrap on Streamlit Cloud: fetch GeoJSON and seed the DB."""
+    if not GEOJSON_PATH.exists() or not DB_PATH.exists():
+        from scripts.setup_data import download_geojson, init_database
+        if not GEOJSON_PATH.exists():
+            download_geojson()
+        if not DB_PATH.exists():
+            init_database()
+
+
+_bootstrap_data()
+
 # Configure the Streamlit page
 st.set_page_config(
     page_title="Welcome Page - Student Mental Health Dashboard",
