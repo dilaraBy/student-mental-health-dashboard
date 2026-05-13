@@ -49,14 +49,14 @@ def init_database() -> None:
             " re-clone or restore from git history if it is missing."
         )
 
-    import pandas as pd
     from db.repository import StudentMentalHealthRepository
+    from services.data_processing import clean_data
 
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     repo = StudentMentalHealthRepository(str(DB_PATH))
     print(f"[init] creating SQLite DB at {DB_PATH}")
     repo.init_tables()
-    df = pd.read_csv(RAW_DATA_PATH)
+    df = clean_data(str(RAW_DATA_PATH))
     inserted = repo.insert_data(df, if_exists="replace")
     print(f"[ok] inserted {inserted} rows into {DB_PATH}")
 
