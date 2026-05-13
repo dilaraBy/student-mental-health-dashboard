@@ -30,7 +30,7 @@ download_placeholder = st.empty()
 
 # Initialize data repository and load data
 try:
-    data_repo = StudentMentalHealthRepository("data/student_mental_health.db")
+    data_repo = StudentMentalHealthRepository(str(DB_PATH))
     df = data_repo.get_all_data()
     
     if df.empty:

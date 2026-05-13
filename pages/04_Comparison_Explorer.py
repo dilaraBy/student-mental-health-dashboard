@@ -16,6 +16,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from services.comparison_analysis import ComparisonAnalysisService, InsightGenerator
 from db.repository import StudentMentalHealthRepository
+from utils.config import DB_PATH
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -28,7 +29,7 @@ st.set_page_config(page_title="Comparison Explorer", page_icon="🔄", layout="w
 def init_services():
     """Initialize services with caching."""
     try:
-        repository = StudentMentalHealthRepository('data/student_mental_health.db')
+        repository = StudentMentalHealthRepository(str(DB_PATH))
         comparison_service = ComparisonAnalysisService(repository)
         logger.info("Comparison Explorer services initialized successfully")
         return comparison_service
