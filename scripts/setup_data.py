@@ -26,13 +26,20 @@ GEOJSON_URL = (
 
 
 def download_geojson() -> None:
+    """Try to download the Bangladesh divisions GeoJSON. Non-fatal on failure —
+    the geographic page will degrade gracefully if the file is missing."""
     if GEOJSON_PATH.exists():
         print(f"[skip] GeoJSON already present: {GEOJSON_PATH}")
         return
     GEOJSON_PATH.parent.mkdir(parents=True, exist_ok=True)
-    print(f"[download] {GEOJSON_URL}")
-    urllib.request.urlretrieve(GEOJSON_URL, GEOJSON_PATH)
-    print(f"[ok] saved to {GEOJSON_PATH}")
+    try:
+        print(f"[download] {GEOJSON_URL}")
+        urllib.request.urlretrieve(GEOJSON_URL, GEOJSON_PATH)
+        print(f"[ok] saved to {GEOJSON_PATH}")
+    except Exception as exc:
+        print(f"[warn] GeoJSON download failed ({exc}); skipping. "
+              "The geographic page will be disabled but the rest of the app "
+              "will run normally.")
 
 
 def init_database() -> None:

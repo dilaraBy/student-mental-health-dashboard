@@ -6,13 +6,17 @@ from utils.config import DB_PATH, GEOJSON_PATH
 
 @st.cache_resource
 def _bootstrap_data() -> None:
-    """First-run bootstrap on Streamlit Cloud: fetch GeoJSON and seed the DB."""
-    if not GEOJSON_PATH.exists() or not DB_PATH.exists():
-        from scripts.setup_data import download_geojson, init_database
-        if not GEOJSON_PATH.exists():
+    """First-run bootstrap on Streamlit Cloud: fetch GeoJSON and seed the DB.
+    Each step is independent — a GeoJSON download failure must not prevent
+    the database from being initialised."""
+    from scripts.setup_data import download_geojson, init_database
+    if not GEOJSON_PATH.exists():
+        try:
             download_geojson()
-        if not DB_PATH.exists():
-            init_database()
+        except Exception as exc:
+            st.warning(f"GeoJSON unavailable; geographic features disabled. ({exc})")
+    if not DB_PATH.exists():
+        init_database()
 
 
 _bootstrap_data()
